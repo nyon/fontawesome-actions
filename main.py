@@ -13,32 +13,32 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 'tag':             ['tag', 'br'],
 		 'tags':            ['tags', 'br'],
 		 'uniF1C0':         ['database', 'br'],
-		 'uniF1C1':         ['pdf', 'br'],
-		 '_422':            ['word', 'br'],
-		 '_423':            ['xls', 'br'],
-		 '_424':            ['powerpoint', 'br'],
-		 '_425':            ['image', 'br'],
-		 '_426':            ['zip', 'br'],
-		 '_427':            ['audio', 'br'],
-		 '_428':            ['video', 'br'],
-		 '_429':            ['code', 'br'],
+		 'uniF1C1':         ['file-pdf-o', 'br'],
+		 '_422':            ['file-word-o', 'br'],
+		 '_423':            ['file-excel-o', 'br'],
+		 '_424':            ['file-powerpoint-o', 'br'],
+		 '_425':            ['file-image-o', 'br'],
+		 '_426':            ['file-zip-o', 'br'],
+		 '_427':            ['file-audio-o', 'br'],
+		 '_428':            ['file-video-o', 'br'],
+		 '_429':            ['file-code-o', 'br'],
 		 'file':            ['file', 'br'],
 		 'file_text':       ['file-text','br'],
-		 'file_text_alt':   ['file-text-alt','br'],
-		 'envelope_alt':    ['envelope-alt','br'],
+		 'file_text_alt':   ['file-text-o','br'],
+		 'envelope_alt':    ['envelope','br'],
 		 'link':            ['link','br'],
-		 'folder_open_alt': ['folder-open-alt', 'br'],
-		 'folder_close_alt':['folder-close-alt', 'br'],
+		 'folder_open_alt': ['folder-open-o', 'br'],
+		 'folder_close_alt':['folder-o', 'br'],
 		 'folder_open':     ['folder-open', 'br'],
-		 'folder_close':    ['folder-close', 'br'],
+		 'folder_close':    ['folder', 'br'],
 		 'shopping_cart':   ['shopping-cart', 'br'],
 		 'comment':         ['comment', 'br'],
-		 'calendar':        ['calender', 'br'],
-		 'picture':         ['picture', 'br'],
+		 'calendar':        ['calendar', 'br'],
+		 'picture':         ['picture-o', 'br'],
 		 'inbox':           ['inbox', 'br']
 		 }
 
-operators = ['plus', 'minus', 'ok', 'remove', 'cog']
+operators = {'plus': 'plus', 'minus': 'minus', 'ok': 'check', 'remove': 'remove', 'cog': 'cog'}
 
 # Remove previous data
 from subprocess import call
@@ -70,14 +70,26 @@ if output_html:
 	html.write('<link rel="stylesheet" type="text/css" href="dist/css/font-awesome.css">\n')
 	html.write('</head>\n')
 	html.write('<body>\n')
-
+	html.write('<table>\n')
+	html.write('<thead>\n')
+	html.write('<tr>\n')
+	html.write('<td></td>\n')
+	for operator, css_name in operators.iteritems():
+		html.write('<td><i class="fa fa-'+css_name+' fa-3x"></i></td>\n')
+	html.write('</tr>\n')
+	html.write('</thead>\n')
+	html.write('<tbody>\n')
+	
 
 for icon, options in icons.iteritems():
 	print icon
 	bookmark = font[icon]
 	position = options[1]
+	if output_html:
+		html.write('<tr>\n')
+		html.write('<td><i class="fa fa-'+options[0]+' fa-3x"></i></td>\n')
 
-	for operator in operators:
+	for operator, _ in operators.iteritems():
 		circle = font[operator]
 		font.selection.select(operator)
 		font.copy()
@@ -111,14 +123,18 @@ for icon, options in icons.iteritems():
 			css.write('.' + css_name + ':before { content: "\\'+(hex(cur_unicode)[2:])+'"; }\n')
 
 		if output_html:
-			html.write('<i class="fa '+css_name+'"></i> <i class="fa '+css_name+' fa-2x"></i> <i class="fa '+css_name+' fa-3x"></i><br>\n')
+			html.write('<td><i class="fa '+css_name+' fa-3x"></i></td>\n')
 
 		cur_unicode = cur_unicode + 1
-
+	if output_html:
+		html.write('</tr>\n')
+	
 if output_css:
 	css.close()
 
 if output_html:
+	html.write('</tbody>\n')
+	html.write('</table>\n')
 	html.write('</body>')
 	html.write('</html>')
 	html.close()
