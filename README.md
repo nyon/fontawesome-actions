@@ -36,6 +36,9 @@ Edit settings in main.py as you like and run main.py
 # Thanks
 
 Thanks @davegandy and @tagliala for making and managing [Font Awesome](http://fontawesome.io).
+
 Thanks @google for supporting webfonts and providing an easy way to compress them to [woff2](https://github.com/google/woff2).
+
 Thanks George Williams and all contributors of [fontforge](https://fontforge.github.io/en-US/). 
+
 Thanks taviso for providing an easy way to convert [ttf2eot](https://code.google.com/p/ttf2eot/).
