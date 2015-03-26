@@ -45,7 +45,7 @@ call(["rm", "-rf", "./dist"])
 call(["mkdir", "./dist"])
 call(["mkdir", "./dist/css"])
 call(["mkdir", "./dist/fonts"])
-call(["cp", "./dist/css/font-awesome.css", "./dist/css/font-awesome.css"])
+call(["cp", "./fontawesome/css/font-awesome.css", "./dist/css/font-awesome.css"])
 
 # Load font
 font = fontforge.open('fontawesome/fonts/fontawesome-webfont.ttf')
@@ -65,6 +65,7 @@ if output_html:
 	html.write('<html>\n')
 	html.write('<head>\n')
 	html.write('<title>fontawesome actions test</title>\n')
+	html.write('<meta charset="utf-8">\n')
 	html.write('<link rel="stylesheet" type="text/css" href="dist/css/font-awesome.css">\n')
 	html.write('</head>\n')
 	html.write('<body>\n')

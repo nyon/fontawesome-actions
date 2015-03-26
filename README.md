@@ -20,11 +20,6 @@ Download and compile font forge:
     make
     sudo make install
 
-Install node packet manager
-
-    sudo apt-get install npm node
-    sudo npm install -g ttf2eot
-
 Clone this repository
 
     git clone --recursive https://github.com/nyon/fontawesome-actions.git
