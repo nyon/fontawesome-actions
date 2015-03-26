@@ -39,8 +39,16 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 
 operators = ['plus', 'minus', 'ok', 'remove', 'cog']
 
+# Remove previous data
+from subprocess import call
+call(["rm", "-rf", "./dist"])
+call(["mkdir", "./dist"])
+call(["mkdir", "./dist/css"])
+call(["mkdir", "./dist/fonts"])
+call(["cp", "./dist/css/font-awesome.css", "./dist/css/font-awesome.css"])
+
 # Load font
-font = fontforge.open('fontawesome-webfont.ttf')
+font = fontforge.open('fontawesome/fonts/fontawesome-webfont.ttf')
 
 # and now the automated process
 
@@ -49,7 +57,7 @@ a2 = psMat.scale(0.6)
 cur_unicode = start_char
 
 if output_css:
-	css = open('font-awesome-actions.css', 'w')
+	css = open('./dist/css/font-awesome.css', 'a+')
 
 if output_html:
 	html = open('demo.html', 'w')
@@ -57,8 +65,7 @@ if output_html:
 	html.write('<html>\n')
 	html.write('<head>\n')
 	html.write('<title>fontawesome actions test</title>\n')
-	html.write('<link rel="stylesheet" type="text/css" href="font-awesome.css">\n')
-	html.write('<link rel="stylesheet" type="text/css" href="font-awesome-actions.css">\n')
+	html.write('<link rel="stylesheet" type="text/css" href="dist/css/font-awesome.css">\n')
 	html.write('</head>\n')
 	html.write('<body>\n')
 
@@ -114,5 +121,9 @@ if output_html:
 	html.write('</html>')
 	html.close()
 
-font.generate('font-awesome-actions.ttf')
-
+font.generate('dist/fonts/fontawesome-webfont.woff')
+font.generate('dist/fonts/fontawesome-webfont.ttf')
+font.generate('dist/fonts/fontawesome-webfont.svg')
+font.generate('dist/fonts/FontAwesome.otf')
+call("./ttf2eot < dist/fonts/fontawesome-webfont.ttf > dist/fonts/fontawesome-webfont.eot", shell=True)
+call("./woff2_compress dist/fonts/fontawesome-webfont.ttf", shell=True)
