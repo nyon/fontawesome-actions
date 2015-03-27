@@ -4,8 +4,11 @@ import psMat
 # settings
 output_html = True
 output_css = True
+generate_combined_icons = True
+generate_splitted_icons = True
 workbench_char = 0xf2ff
 start_char = 0xf300
+outline_border_weight = 320
 icons = {'bookmark':        ['bookmark', 'tr'],
 		 'user':            ['user', 'br'],
 		 '_407':            ['cube', 'br'],
@@ -70,6 +73,9 @@ if output_html:
 	html.write('<link rel="stylesheet" type="text/css" href="dist/css/font-awesome.css">\n')
 	html.write('</head>\n')
 	html.write('<body>\n')
+
+if generate_combined_icons:
+	html.write('<h1>Combined Icons</h1>\n')
 	html.write('<table>\n')
 	html.write('<thead>\n')
 	html.write('<tr>\n')
@@ -79,62 +85,132 @@ if output_html:
 	html.write('</tr>\n')
 	html.write('</thead>\n')
 	html.write('<tbody>\n')
-	
 
-for icon, options in icons.iteritems():
-	print icon
-	bookmark = font[icon]
-	position = options[1]
-	if output_html:
-		html.write('<tr>\n')
-		html.write('<td><i class="fa fa-'+options[0]+' fa-3x"></i></td>\n')
-
-	for operator, _ in operators.iteritems():
-		circle = font[operator]
-		font.selection.select(operator)
-		font.copy()
-		font.selection.select(("unicode", None), cur_unicode)
-		font.paste()
-		if position == 'br':
-			b = psMat.translate(bookmark.width - circle.width * 0.4 * 0.7,0)
-			b2 = psMat.translate(bookmark.width - circle.width * 0.375 * 0.7,0)
-		elif position == 'tr':
-			b = psMat.translate(bookmark.width - circle.width * 0.4 * 0.7,circle.vwidth * 0.3)
-			b2 = psMat.translate(bookmark.width - circle.width * 0.375 * 0.7,circle.vwidth * 0.3)
-
-		font[cur_unicode].changeWeight(320)
-		font[cur_unicode].transform(a)
-		font[cur_unicode].transform(b)
-		font[cur_unicode].exclude(bookmark.layers[1])
-
-		font.selection.select(operator)
-		font.copy()
-		font.selection.select(("unicode", None), workbench_char)
-		font.paste()
-		font[workbench_char].transform(a2)
-		font[workbench_char].transform(b2)
-		font.copy()
-		font.selection.select(("unicode", None), cur_unicode)
-		font.pasteInto()
-
-		css_name = 'fa-' + options[0] + '-' + operator
-		
-		if output_css:
-			css.write('.' + css_name + ':before { content: "\\'+(hex(cur_unicode)[2:])+'"; }\n')
-
+	for icon, options in icons.iteritems():
+		print icon
+		bookmark = font[icon]
+		position = options[1]
 		if output_html:
-			html.write('<td><i class="fa '+css_name+' fa-3x"></i></td>\n')
+			html.write('<tr>\n')
+			html.write('<td><i class="fa fa-'+options[0]+' fa-3x"></i></td>\n')
 
-		cur_unicode = cur_unicode + 1
+		for operator, _ in operators.iteritems():
+			circle = font[operator]
+			font.selection.select(operator)
+			font.copy()
+			font.selection.select(("unicode", None), cur_unicode)
+			font.paste()
+			if position == 'br':
+				b = psMat.translate(bookmark.width - circle.width * 0.4 * 0.7,0)
+				b2 = psMat.translate(bookmark.width - circle.width * 0.375 * 0.7,0)
+			elif position == 'tr':
+				b = psMat.translate(bookmark.width - circle.width * 0.4 * 0.7,circle.vwidth * 0.3)
+				b2 = psMat.translate(bookmark.width - circle.width * 0.375 * 0.7,circle.vwidth * 0.3)
+
+			font[cur_unicode].changeWeight(320)
+			font[cur_unicode].transform(a)
+			font[cur_unicode].transform(b)
+			font[cur_unicode].exclude(bookmark.layers[1])
+
+
+
+			font.selection.select(operator)
+			font.copy()
+			font.selection.select(("unicode", None), workbench_char)
+			font.paste()
+			font[workbench_char].transform(a2)
+			font[workbench_char].transform(b2)
+			font.copy()
+			font.selection.select(("unicode", None), cur_unicode)
+			font.pasteInto()
+
+			css_name = 'fa-' + options[0] + '-' + operator
+
+			if output_css:
+				css.write('.' + css_name + ':before { content: "\\'+(hex(cur_unicode)[2:])+'"; }\n')
+
+			if output_html:
+				html.write('<td><i class="fa '+css_name+' fa-3x"></i></td>\n')
+
+			cur_unicode = cur_unicode + 1
+		if output_html:
+			html.write('</tr>\n')
 	if output_html:
-		html.write('</tr>\n')
-	
+		html.write('</tbody>\n')
+		html.write('</table>\n')
+
+if generate_splitted_icons:
+	import random
+	colors = ['#001f3f','#0074D9','#7FDBFF','#39CCCC','#3D9970','#2ECC40','#01FF70','#FFDC00','#FF851B','#FF4136','#85144b','#F012BE','#B10DC9','#111111','#AAAAAA','#DDDDDD']
+	html.write('<h1>Splitted Icons</h1>\n')
+	html.write('<table>\n')
+	html.write('<thead>\n')
+	html.write('<tr>\n')
+	html.write('<td></td>\n')
+	for operator, css_name in operators.iteritems():
+		html.write('<td><i class="fa fa-'+css_name+' fa-3x"></i></td>\n')
+	html.write('</tr>\n')
+	html.write('</thead>\n')
+	html.write('<tbody>\n')
+
+	for icon, options in icons.iteritems():
+		print icon
+		bookmark = font[icon]
+		position = options[1]
+		if output_html:
+			html.write('<tr>\n')
+			html.write('<td><i class="fa fa-'+options[0]+' fa-3x"></i></td>\n')
+
+		for operator, _ in operators.iteritems():
+			circle = font[operator]
+			font.selection.select(operator)
+			font.copy()
+			font.selection.select(("unicode", None), cur_unicode)
+			font.paste()
+			if position == 'br':
+				b = psMat.translate(bookmark.width - circle.width * 0.4 * 0.7,0)
+				b2 = psMat.translate(bookmark.width - circle.width * 0.375 * 0.7,0)
+			elif position == 'tr':
+				b = psMat.translate(bookmark.width - circle.width * 0.4 * 0.7,circle.vwidth * 0.3)
+				b2 = psMat.translate(bookmark.width - circle.width * 0.375 * 0.7,circle.vwidth * 0.3)
+
+			font[cur_unicode].changeWeight(320)
+			font[cur_unicode].transform(a)
+			font[cur_unicode].transform(b)
+			font[cur_unicode].exclude(bookmark.layers[1])
+
+			font.selection.select(operator)
+			font.copy()
+			font.selection.select(("unicode", None), workbench_char)
+			font.paste()
+			font[workbench_char].transform(a2)
+			font[workbench_char].transform(b2)
+			font.copy()
+			font.selection.select(("unicode", None), cur_unicode+1)
+			font.paste()
+
+			css_name = 'fa-' + options[0] + '-' + operator
+
+			if output_css:
+				css.write('.' + css_name + '-alpha:before { content: "\\'+(hex(cur_unicode)[2:])+'"; }\n')
+				css.write('.' + css_name + '-beta:before { content: "\\'+(hex(cur_unicode+1)[2:])+'"; }\n')
+
+			if output_html:
+				html.write('<td><span class="fa-stack"><i class="fa '+css_name+'-beta fa-3x fa-stack-1x" style="color: '+random.choice(colors)+';"></i><i class="fa '+css_name+'-alpha fa-3x fa-stack-1x"></i></span></td>\n')
+
+			cur_unicode = cur_unicode + 2
+		if output_html:
+			html.write('</tr>\n')
+	if output_html:
+		html.write('</tbody>\n')
+		html.write('</table>\n')
+
+
+
 if output_css:
 	css.close()
 
 if output_html:
-	html.write('</tbody>\n')
-	html.write('</table>\n')
 	html.write('</body>')
 	html.write('</html>')
 	html.close()

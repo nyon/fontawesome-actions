@@ -19,6 +19,7 @@ Download and compile font forge:
     ./configure --enable-python-scripting --enable-python-extension
     make
     sudo make install
+    sudo ldconfig
 
 Clone this repository
 
