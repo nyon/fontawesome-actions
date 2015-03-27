@@ -9,6 +9,7 @@ generate_splitted_icons = True
 workbench_char = 0xf2ff
 start_char = 0xf300
 outline_border_weight = 320
+horizontal_shifting = 0.7
 icons = {'bookmark':        ['bookmark', 'tr'],
 		 'user':            ['user', 'br'],
 		 '_407':            ['cube', 'br'],
@@ -41,7 +42,7 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 'inbox':           ['inbox', 'br']
 		 }
 
-operators = {'plus': 'plus', 'minus': 'minus', 'ok': 'check', 'remove': 'remove', 'cog': 'cog'}
+operators = {'plus': 'plus', 'minus': 'minus', 'ok': 'check', 'remove': 'remove', 'cog': 'cog', 'warning_sign': 'exclamation-triangle', 'remove_sign': 'times-circle', 'ok_sign': 'check-circle'}
 
 # Remove previous data
 from subprocess import call
@@ -87,30 +88,30 @@ if generate_combined_icons:
 	html.write('<tbody>\n')
 
 	for icon, options in icons.iteritems():
-		print icon
-		bookmark = font[icon]
+		print(options[0])
+		glyph = font[icon]
 		position = options[1]
 		if output_html:
 			html.write('<tr>\n')
 			html.write('<td><i class="fa fa-'+options[0]+' fa-3x"></i></td>\n')
 
-		for operator, _ in operators.iteritems():
+		for operator, css_operator in operators.iteritems():
 			circle = font[operator]
 			font.selection.select(operator)
 			font.copy()
 			font.selection.select(("unicode", None), cur_unicode)
 			font.paste()
 			if position == 'br':
-				b = psMat.translate(bookmark.width - circle.width * 0.4 * 0.7,0)
-				b2 = psMat.translate(bookmark.width - circle.width * 0.375 * 0.7,0)
+				b = psMat.translate(glyph.width - circle.width * 0.4 * horizontal_shifting,0)
+				b2 = psMat.translate(glyph.width - circle.width * 0.375 * horizontal_shifting,0)
 			elif position == 'tr':
-				b = psMat.translate(bookmark.width - circle.width * 0.4 * 0.7,circle.vwidth * 0.3)
-				b2 = psMat.translate(bookmark.width - circle.width * 0.375 * 0.7,circle.vwidth * 0.3)
+				b = psMat.translate(glyph.width - circle.width * 0.4 * horizontal_shifting,circle.vwidth * 0.3)
+				b2 = psMat.translate(glyph.width - circle.width * 0.375 * horizontal_shifting,circle.vwidth * 0.3)
 
-			font[cur_unicode].changeWeight(320)
+			font[cur_unicode].changeWeight(outline_border_weight)
 			font[cur_unicode].transform(a)
 			font[cur_unicode].transform(b)
-			font[cur_unicode].exclude(bookmark.layers[1])
+#			font[cur_unicode].exclude(glyph.layers[1])
 
 
 
@@ -124,13 +125,13 @@ if generate_combined_icons:
 			font.selection.select(("unicode", None), cur_unicode)
 			font.pasteInto()
 
-			css_name = 'fa-' + options[0] + '-' + operator
+			css_name = 'fa-' + options[0] + '-' + css_operator
 
 			if output_css:
 				css.write('.' + css_name + ':before { content: "\\'+(hex(cur_unicode)[2:])+'"; }\n')
 
 			if output_html:
-				html.write('<td><i class="fa '+css_name+' fa-3x"></i></td>\n')
+				html.write('<td><i class="fa '+css_name+' fa-2x"></i></td>\n')
 
 			cur_unicode = cur_unicode + 1
 		if output_html:
@@ -140,8 +141,11 @@ if generate_combined_icons:
 		html.write('</table>\n')
 
 if generate_splitted_icons:
+	if output_css:
+		css.write('.fa-action-stack { position: relative; display: inline-block; width: 4em; height: 2em; line-height: 2em; vertical-align: middle;}\n')
+
 	import random
-	colors = ['#001f3f','#0074D9','#7FDBFF','#39CCCC','#3D9970','#2ECC40','#01FF70','#FFDC00','#FF851B','#FF4136','#85144b','#F012BE','#B10DC9','#111111','#AAAAAA','#DDDDDD']
+	colors = ['#001f3f','#0074D9','#7FDBFF','#39CCCC','#3D9970','#2ECC40','#01FF70','#FFDC00','#FF851B','#FF4136','#85144b','#F012BE','#B10DC9']
 	html.write('<h1>Splitted Icons</h1>\n')
 	html.write('<table>\n')
 	html.write('<thead>\n')
@@ -154,30 +158,30 @@ if generate_splitted_icons:
 	html.write('<tbody>\n')
 
 	for icon, options in icons.iteritems():
-		print icon
-		bookmark = font[icon]
+		print(options[0])
+		glyph = font[icon]
 		position = options[1]
 		if output_html:
 			html.write('<tr>\n')
 			html.write('<td><i class="fa fa-'+options[0]+' fa-3x"></i></td>\n')
 
-		for operator, _ in operators.iteritems():
+		for operator, css_operator in operators.iteritems():
 			circle = font[operator]
 			font.selection.select(operator)
 			font.copy()
 			font.selection.select(("unicode", None), cur_unicode)
 			font.paste()
 			if position == 'br':
-				b = psMat.translate(bookmark.width - circle.width * 0.4 * 0.7,0)
-				b2 = psMat.translate(bookmark.width - circle.width * 0.375 * 0.7,0)
+				b = psMat.translate(glyph.width - circle.width * 0.4 * horizontal_shifting,0)
+				b2 = psMat.translate(glyph.width - circle.width * 0.375 * horizontal_shifting,0)
 			elif position == 'tr':
-				b = psMat.translate(bookmark.width - circle.width * 0.4 * 0.7,circle.vwidth * 0.3)
-				b2 = psMat.translate(bookmark.width - circle.width * 0.375 * 0.7,circle.vwidth * 0.3)
+				b = psMat.translate(glyph.width - circle.width * 0.4 * horizontal_shifting,circle.vwidth * 0.3)
+				b2 = psMat.translate(glyph.width - circle.width * 0.375 * horizontal_shifting,circle.vwidth * 0.3)
 
-			font[cur_unicode].changeWeight(320)
+			font[cur_unicode].changeWeight(outline_border_weight)
 			font[cur_unicode].transform(a)
 			font[cur_unicode].transform(b)
-			font[cur_unicode].exclude(bookmark.layers[1])
+			font[cur_unicode].exclude(glyph.layers[1])
 
 			font.selection.select(operator)
 			font.copy()
@@ -189,14 +193,14 @@ if generate_splitted_icons:
 			font.selection.select(("unicode", None), cur_unicode+1)
 			font.paste()
 
-			css_name = 'fa-' + options[0] + '-' + operator
+			css_name = 'fa-' + options[0] + '-' + css_operator
 
 			if output_css:
 				css.write('.' + css_name + '-alpha:before { content: "\\'+(hex(cur_unicode)[2:])+'"; }\n')
 				css.write('.' + css_name + '-beta:before { content: "\\'+(hex(cur_unicode+1)[2:])+'"; }\n')
 
 			if output_html:
-				html.write('<td><span class="fa-stack"><i class="fa '+css_name+'-beta fa-3x fa-stack-1x" style="color: '+random.choice(colors)+';"></i><i class="fa '+css_name+'-alpha fa-3x fa-stack-1x"></i></span></td>\n')
+				html.write('<td><span class="fa-stack"><i class="fa '+css_name+'-beta fa-2x fa-stack-1x" style="color: '+random.choice(colors)+';"></i><i class="fa '+css_name+'-alpha fa-2x fa-stack-1x"></i></span></td>\n')
 
 			cur_unicode = cur_unicode + 2
 		if output_html:
@@ -221,3 +225,5 @@ font.generate('dist/fonts/fontawesome-webfont.svg')
 font.generate('dist/fonts/FontAwesome.otf')
 call("./ttf2eot < dist/fonts/fontawesome-webfont.ttf > dist/fonts/fontawesome-webfont.eot", shell=True)
 call("./woff2_compress dist/fonts/fontawesome-webfont.ttf", shell=True)
+
+print('generated ' + str(cur_unicode - start_char) + ' glyphs')
