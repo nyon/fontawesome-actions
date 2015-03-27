@@ -4,6 +4,24 @@ Work in progress
 
 Just copy the fonts and css folder to your project and use them like the normal Font Awesome. 
 
+You can still use Font Awesome as before:
+
+    <i class="fa fa-folder"></i>
+
+With fontawesome-actions you can combine two icons into an action icon. Several icons are precompiled. See the CSS-file for the full list (when this is stable, a list will be released):
+
+    <i class="fa fa-folder-plus fa-2x"></i>
+
+![simple example](https://raw.github.com/nyon/fontawesome-actions/master/demo/simple.png)
+
+But even better, you can also combine two icons in a stack and use color on each seperate part. Just use the alpha and beta suffix:
+
+    <span class="fa-stack">
+      <i class="fa fa-folder-plus-alpha fa-2x fa-stack-1x"></i>
+      <i class="fa fa-folder-plus-beta fa-2x fa-stack-1x" style="color: #F012BE;"></i>
+    </span>
+
+![stacked example](https://raw.github.com/nyon/fontawesome-actions/master/demo/stacked.png)
 
 # Contribute
 Be aware, that contributing means installing a lot of dependencies. The following install guide is for debian-based systems but could be easily ported to other systems (contribution appreciated!).
