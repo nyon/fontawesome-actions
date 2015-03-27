@@ -111,7 +111,7 @@ if generate_combined_icons:
 			font[cur_unicode].changeWeight(outline_border_weight)
 			font[cur_unicode].transform(a)
 			font[cur_unicode].transform(b)
-#			font[cur_unicode].exclude(glyph.layers[1])
+			font[cur_unicode].exclude(glyph.layers[1])
 
 
 
