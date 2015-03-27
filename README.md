@@ -1,5 +1,3 @@
-Work in progress
-
 # Usage
 
 Just copy the fonts and css folder to your project and use them like the normal Font Awesome. 
