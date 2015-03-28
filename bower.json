@@ -1,0 +1,37 @@
+{
+  "name": "fontawesome-actions",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nyon/fontawesome-actions",
+  "authors": [
+    "nyon <me@nyon.de>"
+  ],
+  "description": "Awesome actions and overlays for Font Awesome. Acts as a superset.",
+  "main": [
+    "dist/css/font-awesome.min.css",
+    "dist/fonts/fontawesome-webfont.eot",
+    "dist/fonts/fontawesome-webfont.svg",
+    "dist/fonts/fontawesome-webfont.ttf",
+    "dist/fonts/fontawesome-webfont.woff",
+    "dist/fonts/fontawesome-webfont.woff2"
+  ],
+  "keywords": [
+    "fontawesome",
+    "actions",
+    "overlays",
+    "slashed",
+    "slash",
+    "plus",
+    "minus",
+    "alert",
+    "warning",
+    "success"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
