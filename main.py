@@ -11,6 +11,7 @@ workbench_char = 0xf2ff
 start_char = 0xf300
 outline_border_weight = 320
 horizontal_shifting = 0.7
+compress_css = True
 icons = {'bookmark':        ['bookmark', 'tr'],
 		 'user':            ['user', 'br'],
 		 '_407':            ['cube', 'br'],
@@ -72,7 +73,10 @@ if output_html:
 	html.write('<head>\n')
 	html.write('<title>fontawesome actions test</title>\n')
 	html.write('<meta charset="utf-8">\n')
-	html.write('<link rel="stylesheet" type="text/css" href="dist/css/font-awesome.css">\n')
+	if compress_css:
+		html.write('<link rel="stylesheet" type="text/css" href="dist/css/font-awesome.min.css">\n')
+	else:
+		html.write('<link rel="stylesheet" type="text/css" href="dist/css/font-awesome.css">\n')
 	html.write('</head>\n')
 	html.write('<body>\n')
 
@@ -284,6 +288,18 @@ if generate_slashed_icons:
 
 if output_css:
 	css.close()
+
+	if compress_css:
+		css = open('./dist/css/font-awesome.css', 'r')
+		text = css.read()
+		css.close()
+
+		import css_compress
+
+		css = open('./dist/css/font-awesome.min.css', 'w')
+		css.write(css_compress.compress(text))
+		css.close()
+
 
 if output_html:
 	html.write('</body>')

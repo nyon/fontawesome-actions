@@ -66,3 +66,5 @@ Thanks @google for supporting webfonts and providing an easy way to compress the
 Thanks George Williams and all contributors of [fontforge](https://fontforge.github.io/en-US/). 
 
 Thanks taviso for providing an easy way to convert [ttf2eot](https://code.google.com/p/ttf2eot/).
+
+Thanks Yahoo! Inc. and Yury Selivanov for providing and porting the YUI css minimizer [csscompressor](https://pypi.python.org/pypi/csscompressor).
