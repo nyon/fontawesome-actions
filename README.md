@@ -1,6 +1,49 @@
-# Usage
+# Installation
+
+## Static
 
 Just copy the fonts and css folder to your project and use them like the normal Font Awesome. 
+
+## With bower
+
+    bower install fontawesome-actions
+
+## With bundler < 1.8.4
+
+Edit your Gemfile:
+
+    # At the top
+    source 'https://rails-assets.org'
+
+    # somewhere in your Gemfile
+    gem 'rails-assets-fontawesome-actions'
+
+Then run
+
+    bundle
+
+And include the following in application.css
+
+    *= require fontawesome-actions/dist/css/font-awesome
+
+## With bundler >= 1.8.4
+
+Edit your Gemfile:
+
+    # somewhere in your Gemfile
+    source 'https://rails-assets.org' do
+      gem 'rails-assets-fontawesome-actions'
+    end
+
+Then run
+
+    bundle
+
+And include the following in application.css
+
+    *= require fontawesome-actions/dist/css/font-awesome
+
+# Usage
 
 You can still use Font Awesome as before:
 
