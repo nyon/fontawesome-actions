@@ -6,6 +6,7 @@ output_html = True
 output_css = True
 generate_combined_icons = True
 generate_splitted_icons = True
+generate_slashed_icons = True
 workbench_char = 0xf2ff
 start_char = 0xf300
 outline_border_weight = 320
@@ -203,6 +204,76 @@ if generate_splitted_icons:
 				html.write('<td><span class="fa-stack"><i class="fa '+css_name+'-beta fa-2x fa-stack-1x" style="color: '+random.choice(colors)+';"></i><i class="fa '+css_name+'-alpha fa-2x fa-stack-1x"></i></span></td>\n')
 
 			cur_unicode = cur_unicode + 2
+		if output_html:
+			html.write('</tr>\n')
+	if output_html:
+		html.write('</tbody>\n')
+		html.write('</table>\n')
+
+if generate_slashed_icons:
+	html.write('<h1>Slashed Icons</h1>\n')
+	html.write('<table>\n')
+	html.write('<tbody>\n')
+	html.write('<tr>\n')
+	html.write('<td><i class="fa fa-bell fa-2x"></i></td>\n')
+	html.write('<td><i class="fa fa-bell-slash fa-2x"></i></td>\n')
+	html.write('</tr>\n')
+
+	for icon, options in icons.iteritems():
+		print(options[0])
+		glyph = font[icon]
+		position = options[1]
+		if output_html:
+			html.write('<tr>\n')
+			html.write('<td><i class="fa fa-'+options[0]+' fa-2x"></i></td>\n')
+
+		circle = font['minus']
+		font.selection.select('minus')
+		font.copy()
+
+		font.selection.select(("unicode", None), workbench_char)
+		font.paste()
+
+		x = (font[icon].boundingBox()[2] - font[icon].boundingBox()[0]) / 2.0
+		y = (font[icon].boundingBox()[3] - font[icon].boundingBox()[1]) / 2.0
+		s = psMat.scale(1.7,0.5)
+		font[workbench_char].transform(s)
+		r = psMat.rotate(3.1415926535/4.0)
+		font[workbench_char].transform(r)
+		t = psMat.translate(x-500,y-1400)
+		font[workbench_char].transform(t)
+
+		font.selection.select(("unicode", None), workbench_char)
+		font.copy()
+
+		font.selection.select(("unicode", None), cur_unicode)
+		font.paste()
+		
+		t = psMat.translate(-160,120)
+		font[workbench_char].transform(t)
+
+		font.selection.select(("unicode", None), workbench_char)
+		font.copy()
+
+		font.selection.select(("unicode", None), cur_unicode)
+		font.pasteInto()
+
+		font[cur_unicode].exclude(font[icon].layers[1])
+
+		font.selection.select(("unicode", None), cur_unicode)
+		font.pasteInto()
+
+		font.removeOverlap()
+
+		css_name = 'fa-' + options[0] + '-slash'
+
+		if output_css:
+			css.write('.' + css_name + ':before { content: "\\'+(hex(cur_unicode)[2:])+'"; }\n')
+
+		if output_html:
+			html.write('<td><i class="fa '+css_name+' fa-2x"></i></td>\n')
+
+		cur_unicode = cur_unicode + 1
 		if output_html:
 			html.write('</tr>\n')
 	if output_html:

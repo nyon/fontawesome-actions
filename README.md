@@ -21,8 +21,15 @@ But even better, you can also combine two icons in a stack and use color on each
 
 ![stacked example](https://raw.github.com/nyon/fontawesome-actions/master/demo/stacked.png)
 
-# Contribute
-Be aware, that contributing means installing a lot of dependencies. The following install guide is for debian-based systems but could be easily ported to other systems (contribution appreciated!).
+Another feature is the possibility to slash out icons, similar to the effect shown by the normal fa-bell-slash:
+
+    <i class="fa fa-folder-slash fa-2x"></i>
+
+![slashed example](https://raw.github.com/nyon/fontawesome-actions/master/demo/slashed.png)
+
+
+# Customize
+Be aware, that customizing means installing a lot of dependencies. The following install guide is for debian-based systems but could be easily ported to other systems (contribution appreciated!).
 
 ## Prerequisites
 
