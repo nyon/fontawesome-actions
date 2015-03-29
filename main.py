@@ -41,7 +41,10 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 'comment':         ['comment', 'br'],
 		 'calendar':        ['calendar', 'br'],
 		 'picture':         ['picture-o', 'br'],
-		 'inbox':           ['inbox', 'br']
+		 'inbox':           ['inbox', 'br'],
+		 'filter':          ['filter', 'br'],
+		 'facetime_video':  ['video-camera', 'br'],
+		 'save':            ['floppy-o', 'br']
 		 }
 
 operators = {'plus': 'plus', 'minus': 'minus', 'ok': 'check', 'remove': 'remove', 'cog': 'cog', 'warning_sign': 'exclamation-triangle', 'remove_sign': 'times-circle', 'ok_sign': 'check-circle'}
