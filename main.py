@@ -132,6 +132,7 @@ if generate_combined_icons:
 			font.copy()
 			font.selection.select(("unicode", None), cur_unicode)
 			font.pasteInto()
+			font.correctDirection()
 
 			css_name = 'fa-' + options[0] + '-' + css_operator
 
@@ -179,6 +180,7 @@ if generate_splitted_icons:
 			font.copy()
 			font.selection.select(("unicode", None), cur_unicode)
 			font.paste()
+
 			if position == 'br':
 				b = psMat.translate(glyph.width - circle.width * 0.4 * horizontal_shifting,0)
 				b2 = psMat.translate(glyph.width - circle.width * 0.375 * horizontal_shifting,0)
@@ -190,6 +192,7 @@ if generate_splitted_icons:
 			font[cur_unicode].transform(a)
 			font[cur_unicode].transform(b)
 			font[cur_unicode].exclude(glyph.layers[1])
+			font.correctDirection()
 
 			font.selection.select(operator)
 			font.copy()
@@ -200,6 +203,8 @@ if generate_splitted_icons:
 			font.copy()
 			font.selection.select(("unicode", None), cur_unicode+1)
 			font.paste()
+			font.correctDirection()
+
 
 			css_name = 'fa-' + options[0] + '-' + css_operator
 
@@ -271,6 +276,9 @@ if generate_slashed_icons:
 		font.pasteInto()
 
 		font.removeOverlap()
+
+		font.correctDirection()
+
 
 		css_name = 'fa-' + options[0] + '-slash'
 
