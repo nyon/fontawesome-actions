@@ -47,7 +47,18 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 'save':            ['floppy-o', 'br']
 		 }
 
-operators = {'plus': 'plus', 'minus': 'minus', 'ok': 'check', 'remove': 'remove', 'cog': 'cog', 'warning_sign': 'exclamation-triangle', 'remove_sign': 'times-circle', 'ok_sign': 'check-circle'}
+operators = {'plus': 'plus',
+             'minus': 'minus',
+             'ok': 'check',
+             'remove': 'remove',
+             'cog': 'cog',
+             'warning_sign': 'exclamation-triangle',
+             'remove_sign': 'times-circle',
+             'ok_sign': 'check-circle',
+             'question': 'question',
+             '_279': 'info',
+             'ban_circle': 'ban',
+             'star': 'star'}
 
 # Remove previous data
 from subprocess import call
@@ -104,6 +115,7 @@ if generate_combined_icons:
 			html.write('<td><i class="fa fa-'+options[0]+' fa-3x"></i></td>\n')
 
 		for operator, css_operator in operators.iteritems():
+			print(' & ' + operator)
 			circle = font[operator]
 			font.selection.select(operator)
 			font.copy()
@@ -260,7 +272,7 @@ if generate_slashed_icons:
 
 		font.selection.select(("unicode", None), cur_unicode)
 		font.paste()
-		
+
 		t = psMat.translate(-160,120)
 		font[workbench_char].transform(t)
 
