@@ -45,8 +45,7 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 'filter':          ['filter', 'br'],
 		 'facetime_video':  ['video-camera', 'br'],
 		 'save':            ['floppy-o', 'br'],
-		 'cloud':           ['cloud', 'br']
-		 }
+		 'cloud':           ['cloud', 'br']}
 
 operators = {'plus': 'plus',
 						 'minus': 'minus',
@@ -60,7 +59,8 @@ operators = {'plus': 'plus',
 						 '_279': 'info',
 						 'ban_circle': 'ban',
 						 'star': 'star',
-						 'refresh': 'refresh'}
+						 'refresh': 'refresh',
+						 'search': 'search'}
 
 # Remove previous data
 from subprocess import call
