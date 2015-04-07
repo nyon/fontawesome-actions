@@ -45,22 +45,25 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 'filter':          ['filter', 'br'],
 		 'facetime_video':  ['video-camera', 'br'],
 		 'save':            ['floppy-o', 'br'],
-		 'cloud':           ['cloud', 'br']}
+		 'cloud':           ['cloud', 'br'],
+		 'heart':           ['heart', 'br'],
+		 'heart_empty':     ['heart-o', 'br']
+		 }
 
 operators = {'plus': 'plus',
-						 'minus': 'minus',
-						 'ok': 'check',
-						 'remove': 'remove',
-						 'cog': 'cog',
-						 'warning_sign': 'exclamation-triangle',
-						 'remove_sign': 'times-circle',
-						 'ok_sign': 'check-circle',
-						 'question': 'question',
-						 '_279': 'info',
-						 'ban_circle': 'ban',
-						 'star': 'star',
-						 'refresh': 'refresh',
-						 'search': 'search'}
+			 'minus': 'minus',
+			 'ok': 'check',
+			 'remove': 'remove',
+			 'cog': 'cog',
+			 'warning_sign': 'exclamation-triangle',
+			 'remove_sign': 'times-circle',
+			 'ok_sign': 'check-circle',
+			 'question': 'question',
+			 '_279': 'info',
+			 'ban_circle': 'ban',
+			 'star': 'star',
+			 'refresh': 'refresh',
+			 'search': 'search'}
 
 # Remove previous data
 from subprocess import call
