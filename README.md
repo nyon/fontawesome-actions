@@ -24,7 +24,7 @@ Then run
 
 And include the following in application.css
 
-    *= require fontawesome-actions/dist/css/font-awesome
+    *= require fontawesome-actions
 
 ## With bundler >= 1.8.4
 
@@ -41,7 +41,7 @@ Then run
 
 And include the following in application.css
 
-    *= require fontawesome-actions/dist/css/font-awesome
+    *= require fontawesome-actions
 
 # Usage
 
