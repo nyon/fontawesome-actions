@@ -47,7 +47,8 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 'save':            ['floppy-o', 'br'],
 		 'cloud':           ['cloud', 'br'],
 		 'heart':           ['heart', 'br'],
-		 'heart_empty':     ['heart-o', 'br']
+		 'heart_empty':     ['heart-o', 'br'],
+		 'group':           ['group', 'br']
 		 }
 
 operators = {'plus': 'plus',
@@ -63,7 +64,9 @@ operators = {'plus': 'plus',
 			 'ban_circle': 'ban',
 			 'star': 'star',
 			 'refresh': 'refresh',
-			 'search': 'search'}
+			 'search': 'search',
+			 'pencil': 'pencil',
+			 'trash': 'trash'}
 
 # Remove previous data
 from subprocess import call
@@ -297,6 +300,8 @@ if generate_slashed_icons:
 		font.removeOverlap()
 
 		font.correctDirection()
+
+		font[cur_unicode].width = glyph.width
 
 
 		css_name = 'fa-' + options[0] + '-slash'
