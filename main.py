@@ -7,7 +7,7 @@ output_css = True
 generate_combined_icons = True
 generate_splitted_icons = True
 generate_slashed_icons = True
-generate_stroked_icons = True
+generate_stroked_icons = False
 workbench_char = 0xf2ff
 start_char = 0xf300
 outline_border_weight = 320
@@ -47,10 +47,30 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 'facetime_video':  ['video-camera', 'br'],
 		 'save':            ['floppy-o', 'br'],
 		 '_388':            ['graduation-cap', 'br'],
-		 'question_sign':   ['question-circle', 'br']
+		 'question_sign':   ['question-circle', 'br'],
+		 'cloud':           ['cloud', 'br'],
+		 'heart':           ['heart', 'br'],
+		 'heart_empty':     ['heart-o', 'br'],
+		 'group':           ['group', 'br'],
+		 'globe':						['globe', 'br']
 		 }
 
-operators = {'plus': 'plus', 'minus': 'minus', 'ok': 'check', 'remove': 'remove', 'cog': 'cog', 'warning_sign': 'exclamation-triangle', 'remove_sign': 'times-circle', 'ok_sign': 'check-circle'}
+operators = {'plus': 'plus',
+			 'minus': 'minus',
+			 'ok': 'check',
+			 'remove': 'remove',
+			 'cog': 'cog',
+			 'warning_sign': 'exclamation-triangle',
+			 'remove_sign': 'times-circle',
+			 'ok_sign': 'check-circle',
+			 'question': 'question',
+			 '_279': 'info',
+			 'ban_circle': 'ban',
+			 'star': 'star',
+			 'refresh': 'refresh',
+			 'search': 'search',
+			 'pencil': 'pencil',
+			 'trash': 'trash'}
 
 # Remove previous data
 from subprocess import call
@@ -107,6 +127,7 @@ if generate_combined_icons:
 			html.write('<td><i class="fa fa-'+options[0]+' fa-3x"></i></td>\n')
 
 		for operator, css_operator in operators.iteritems():
+			print(' & ' + operator)
 			circle = font[operator]
 			font.selection.select(operator)
 			font.copy()
@@ -122,6 +143,7 @@ if generate_combined_icons:
 			font[cur_unicode].changeWeight(outline_border_weight)
 			font[cur_unicode].transform(a)
 			font[cur_unicode].transform(b)
+			font[cur_unicode].removeOverlap()
 			font[cur_unicode].exclude(glyph.layers[1])
 
 
@@ -194,6 +216,7 @@ if generate_splitted_icons:
 			font[cur_unicode].changeWeight(outline_border_weight)
 			font[cur_unicode].transform(a)
 			font[cur_unicode].transform(b)
+			font[cur_unicode].removeOverlap()
 			font[cur_unicode].exclude(glyph.layers[1])
 			font.correctDirection()
 
@@ -263,7 +286,7 @@ if generate_slashed_icons:
 
 		font.selection.select(("unicode", None), cur_unicode)
 		font.paste()
-		
+
 		t = psMat.translate(-160,120)
 		font[workbench_char].transform(t)
 
@@ -281,6 +304,8 @@ if generate_slashed_icons:
 		font.removeOverlap()
 
 		font.correctDirection()
+
+		font[cur_unicode].width = glyph.width
 
 
 		css_name = 'fa-' + options[0] + '-slash'
