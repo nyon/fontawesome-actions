@@ -7,6 +7,7 @@ output_css = True
 generate_combined_icons = True
 generate_splitted_icons = True
 generate_slashed_icons = True
+generate_stroked_icons = True
 workbench_char = 0xf2ff
 start_char = 0xf300
 outline_border_weight = 320
@@ -44,7 +45,9 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 'inbox':           ['inbox', 'br'],
 		 'filter':          ['filter', 'br'],
 		 'facetime_video':  ['video-camera', 'br'],
-		 'save':            ['floppy-o', 'br']
+		 'save':            ['floppy-o', 'br'],
+		 '_388':            ['graduation-cap', 'br'],
+		 'question_sign':   ['question-circle', 'br']
 		 }
 
 operators = {'plus': 'plus', 'minus': 'minus', 'ok': 'check', 'remove': 'remove', 'cog': 'cog', 'warning_sign': 'exclamation-triangle', 'remove_sign': 'times-circle', 'ok_sign': 'check-circle'}
@@ -281,6 +284,51 @@ if generate_slashed_icons:
 
 
 		css_name = 'fa-' + options[0] + '-slash'
+
+		if output_css:
+			css.write('.' + css_name + ':before { content: "\\'+(hex(cur_unicode)[2:])+'"; }\n')
+
+		if output_html:
+			html.write('<td><i class="fa '+css_name+' fa-2x"></i></td>\n')
+
+		cur_unicode = cur_unicode + 1
+		if output_html:
+			html.write('</tr>\n')
+	if output_html:
+		html.write('</tbody>\n')
+		html.write('</table>\n')
+
+
+if generate_stroked_icons:
+	html.write('<h1>Stroked Icons</h1>\n')
+	html.write('<table>\n')
+	html.write('<tbody>\n')
+
+	for icon, options in icons.iteritems():
+		if options[0].endswith('-o'):
+			continue
+		print(options[0])
+		glyph = font[icon]
+		position = options[1]
+		if output_html:
+			html.write('<tr>\n')
+			html.write('<td><i class="fa fa-'+options[0]+' fa-2x"></i></td>\n')
+
+		font.selection.select(glyph)
+		font.copy()
+
+		font.selection.select(("unicode", None), cur_unicode)
+		font.paste()
+		
+		font[cur_unicode].stroke('circular', 100, 'round', 'round', ('cleanup'))
+
+		#font.simplify(10)
+		font.removeOverlap()
+
+		font.correctDirection()
+
+
+		css_name = 'fa-' + options[0] + '-o'
 
 		if output_css:
 			css.write('.' + css_name + ':before { content: "\\'+(hex(cur_unicode)[2:])+'"; }\n')
