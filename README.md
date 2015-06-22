@@ -70,6 +70,12 @@ Another feature is the possibility to slash out icons, similar to the effect sho
 
 ![slashed example](https://raw.github.com/nyon/fontawesome-actions/master/demo/slashed.png)
 
+As some icons got no outline version, this project tries to implement these automatically. So some of the icons also support the -o suffix:
+
+    <i class="fa fa-comment-o fa-2x"></i>
+
+![stroked example](https://raw.github.com/nyon/fontawesome-actions/master/demo/stroked.png)
+
 
 # Customize
 Be aware, that customizing means installing a lot of dependencies. The following install guide is for debian-based systems but could be easily ported to other systems (contribution appreciated!).
