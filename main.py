@@ -7,7 +7,7 @@ output_css = True
 generate_combined_icons = True
 generate_splitted_icons = True
 generate_slashed_icons = True
-generate_stroked_icons = False
+generate_stroked_icons = True
 workbench_char = 0xf2ff
 start_char = 0xf300
 outline_border_weight = 320
@@ -19,7 +19,7 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 'camera':          ['camera', 'br'],
 		 'tag':             ['tag', 'br'],
 		 'tags':            ['tags', 'br'],
-		 'uniF1C0':         ['database', 'br'],
+		 'uniF1C0':         ['database', 'br', False],
 		 'uniF1C1':         ['file-pdf-o', 'br'],
 		 '_422':            ['file-word-o', 'br'],
 		 '_423':            ['file-excel-o', 'br'],
@@ -30,29 +30,29 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 '_428':            ['file-video-o', 'br'],
 		 '_429':            ['file-code-o', 'br'],
 		 'file':            ['file', 'br'],
-		 'file_text':       ['file-text','br'],
+		 'file_text':       ['file-text','br', False],
 		 'file_text_alt':   ['file-text-o','br'],
 		 'envelope_alt':    ['envelope','br'],
 		 'link':            ['link','br'],
 		 'folder_open_alt': ['folder-open-o', 'br'],
 		 'folder_close_alt':['folder-o', 'br'],
-		 'folder_open':     ['folder-open', 'br'],
+		 'folder_open':     ['folder-open', 'br', False],
 		 'folder_close':    ['folder', 'br'],
-		 'shopping_cart':   ['shopping-cart', 'br'],
+		 'shopping_cart':   ['shopping-cart', 'br', False],
 		 'comment':         ['comment', 'br'],
-		 'calendar':        ['calendar', 'br'],
+		 'calendar':        ['calendar', 'br', False],
 		 'picture':         ['picture-o', 'br'],
 		 'inbox':           ['inbox', 'br'],
 		 'filter':          ['filter', 'br'],
 		 'facetime_video':  ['video-camera', 'br'],
 		 'save':            ['floppy-o', 'br'],
-		 '_388':            ['graduation-cap', 'br'],
+		 '_388':            ['graduation-cap', 'br', False],
 		 'question_sign':   ['question-circle', 'br'],
 		 'cloud':           ['cloud', 'br'],
-		 'heart':           ['heart', 'br'],
+		 'heart':           ['heart', 'br', False],
 		 'heart_empty':     ['heart-o', 'br'],
 		 'group':           ['group', 'br'],
-		 'globe':						['globe', 'br']
+		 'globe':			['globe', 'br', False]
 		 }
 
 operators = {'plus': 'plus',
@@ -331,6 +331,8 @@ if generate_stroked_icons:
 
 	for icon, options in icons.iteritems():
 		if options[0].endswith('-o'):
+			continue
+		if len(options) >= 3 and not options[2]:
 			continue
 		print(options[0])
 		glyph = font[icon]
