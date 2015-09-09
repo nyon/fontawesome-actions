@@ -52,7 +52,10 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 'heart':           ['heart', 'br', False],
 		 'heart_empty':     ['heart-o', 'br'],
 		 'group':           ['group', 'br'],
-		 'globe':			['globe', 'br', False]
+		 'globe':			      ['globe', 'br', False],
+		 '_593':            ['map-o', 'br'],
+		 '_594':            ['map', 'br', False],
+		 'cog':             ['cog', 'br'],
 		 }
 
 operators = {'plus': 'plus',
@@ -72,6 +75,8 @@ operators = {'plus': 'plus',
 			 'pencil': 'pencil',
 			 'trash': 'trash'}
 
+defined_css_rules = []
+
 # Remove previous data
 from subprocess import call
 call(["rm", "-rf", "./dist"])
@@ -90,7 +95,7 @@ a2 = psMat.scale(0.6)
 cur_unicode = start_char
 
 if output_css:
-	css = open('./dist/css/font-awesome.css', 'a+')
+	css = open('./dist/css/font-awesome-appendix.css', 'w')
 
 if output_html:
 	html = open('demo.html', 'w')
@@ -160,6 +165,7 @@ if generate_combined_icons:
 			font.correctDirection()
 
 			css_name = 'fa-' + options[0] + '-' + css_operator
+			defined_css_rules.append(css_name)
 
 			if output_css:
 				css.write('.' + css_name + ':before { content: "\\'+(hex(cur_unicode)[2:])+'"; }\n')
@@ -311,6 +317,7 @@ if generate_slashed_icons:
 		css_name = 'fa-' + options[0] + '-slash'
 
 		if output_css:
+			defined_css_rules.append(css_name)
 			css.write('.' + css_name + ':before { content: "\\'+(hex(cur_unicode)[2:])+'"; }\n')
 
 		if output_html:
@@ -346,7 +353,7 @@ if generate_stroked_icons:
 
 		font.selection.select(("unicode", None), cur_unicode)
 		font.paste()
-		
+
 		font[cur_unicode].stroke('circular', 100, 'round', 'round', ('cleanup'))
 
 		#font.simplify(10)
@@ -358,6 +365,7 @@ if generate_stroked_icons:
 		css_name = 'fa-' + options[0] + '-o'
 
 		if output_css:
+			defined_css_rules.append(css_name)
 			css.write('.' + css_name + ':before { content: "\\'+(hex(cur_unicode)[2:])+'"; }\n')
 
 		if output_html:
@@ -374,6 +382,31 @@ if generate_stroked_icons:
 
 if output_css:
 	css.close()
+
+	# cleanup pre existant css rules that are conflicting with newly generated ones
+	print 'cleanup ...'
+	css = open('./dist/css/font-awesome.css', 'r')
+	text = css.read()
+	css.close()
+
+	import re
+	for rule in defined_css_rules:
+		print rule
+		text = re.sub(r'\.'+rule+':before {\n(.*)\n}', '', text)
+
+
+	css = open('./dist/css/font-awesome-appendix.css', 'r')
+	appendix_text = css.read()
+	css.close()
+
+	css = open('./dist/css/font-awesome.css', 'w')
+	css.write(text)
+	css.write(appendix_text)
+	css.close()
+
+	call(['rm', './dist/css/font-awesome-appendix.css'])
+
+	print 'done'
 
 	if compress_css:
 		css = open('./dist/css/font-awesome.css', 'r')
