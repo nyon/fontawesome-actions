@@ -1,9 +1,12 @@
+#!/usr/bin/python
 import fontforge
 import psMat
+import re
 
 # settings
 output_html = True
 output_css = True
+output_list = True
 generate_combined_icons = True
 generate_splitted_icons = True
 generate_slashed_icons = True
@@ -56,6 +59,13 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 '_593':            ['map-o', 'br'],
 		 '_594':            ['map', 'br', False],
 		 'cog':             ['cog', 'br'],
+		 '_591':            ['map-pin', 'br'],
+		 '_616':            ['shopping-basket', 'br'],
+		 '_615':            ['shopping-bag', 'br'],
+		 '_618':            ['bluetooth', 'br'],
+		 '_619':            ['bluetooth-b', 'br'],
+		 'tasks':           ['tasks', 'br'],
+		 'credit_card':     ['credit-card', 'br']
 		 }
 
 operators = {'plus': 'plus',
@@ -73,7 +83,11 @@ operators = {'plus': 'plus',
 			 'refresh': 'refresh',
 			 'search': 'search',
 			 'pencil': 'pencil',
-			 'trash': 'trash'}
+			 'trash': 'trash',
+			 'envelope_alt': 'envelope',
+			 'time': 'clock-o',
+			 'tag': 'tag',
+			 'arrow_right': 'arrow-right'}
 
 defined_css_rules = []
 
@@ -94,8 +108,14 @@ a = psMat.scale(0.6)
 a2 = psMat.scale(0.6)
 cur_unicode = start_char
 
+icon_list = []
+
 if output_css:
 	css = open('./dist/css/font-awesome-appendix.css', 'w')
+
+if output_list:
+	with open('./README.tpl.md', 'r') as content_file:
+		readme_template = content_file.read()
 
 if output_html:
 	html = open('demo.html', 'w')
@@ -164,6 +184,7 @@ if generate_combined_icons:
 			font.pasteInto()
 			font.correctDirection()
 
+			icon_list.append(options[0] + '-' + css_operator)
 			css_name = 'fa-' + options[0] + '-' + css_operator
 			defined_css_rules.append(css_name)
 
@@ -237,7 +258,8 @@ if generate_splitted_icons:
 			font.paste()
 			font.correctDirection()
 
-
+			icon_list.append(options[0] + '-' + css_operator + '-alpha')
+			icon_list.append(options[0] + '-' + css_operator + '-beta')
 			css_name = 'fa-' + options[0] + '-' + css_operator
 
 			if output_css:
@@ -313,7 +335,7 @@ if generate_slashed_icons:
 
 		font[cur_unicode].width = glyph.width
 
-
+		icon_list.append(options[0] + '-slash')
 		css_name = 'fa-' + options[0] + '-slash'
 
 		if output_css:
@@ -361,7 +383,7 @@ if generate_stroked_icons:
 
 		font.correctDirection()
 
-
+		icon_list.append(options[0] + '-o')
 		css_name = 'fa-' + options[0] + '-o'
 
 		if output_css:
@@ -389,7 +411,6 @@ if output_css:
 	text = css.read()
 	css.close()
 
-	import re
 	for rule in defined_css_rules:
 		print rule
 		text = re.sub(r'\.'+rule+':before {\n(.*)\n}', '', text)
@@ -425,11 +446,40 @@ if output_html:
 	html.write('</html>')
 	html.close()
 
+if output_list:
+	print('generating README.md')
+	list = open('./README.md', 'w')
+
+	with open('./fontawesome/README.md', 'r') as content_file:
+		fa_readme = content_file.read()
+
+	m = re.search('# \[Font Awesome v([0-9\.]+)\]\((.*)\)',fa_readme)
+	readme_template = readme_template.replace('[[VERSION]]', m.group(1))
+
+	m = re.search('Font Awesome is a full suite of ([0-9]+) pictographic icons for easy scalable vector graphics on websites,', fa_readme)
+	orig_count = int(m.group(1))
+	readme_template = readme_template.replace('[[ORIG-COUNT]]', m.group(1))
+
+	readme_template = readme_template.replace('[[NEW-COUNT]]', str(cur_unicode - start_char + orig_count))
+
+	list.write(readme_template)
+
+	for icon in icon_list:
+		list.write('* ' + icon + '\n')
+
+	list.close()
+
+print('[FontForge] generating dist/fonts/fontawesome-webfont.woff')
 font.generate('dist/fonts/fontawesome-webfont.woff')
+print('[FontForge] generating dist/fonts/fontawesome-webfont.ttf')
 font.generate('dist/fonts/fontawesome-webfont.ttf')
+print('[FontForge] generating dist/fonts/fontawesome-webfont.svg')
 font.generate('dist/fonts/fontawesome-webfont.svg')
+print('[FontForge] generating dist/fonts/FontAwesome.otf')
 font.generate('dist/fonts/FontAwesome.otf')
+print('[ttf2eot] generating dist/fonts/fontawesome-webfont.eot')
 call("./ttf2eot < dist/fonts/fontawesome-webfont.ttf > dist/fonts/fontawesome-webfont.eot", shell=True)
+print('[woff2_compress] generating dist/fonts/fontawesome-webfont.woff2')
 call("./woff2_compress dist/fonts/fontawesome-webfont.ttf", shell=True)
 
-print('generated ' + str(cur_unicode - start_char) + ' glyphs')
+print('DONE! generated ' + str(cur_unicode - start_char) + ' glyphs')
