@@ -1,7 +1,7 @@
 # Introduction
 
-This repository contains a superset of Dave Gandy's FontAwesome icons. It is based on FontAwesome 4.5.0 and extends
-the original 605 icons to a total amount of ~3680. See the bottom of this document for a list of all icons.
+This repository contains a superset of Dave Gandy's FontAwesome icons. It is based on FontAwesome 4.6.1 and extends
+the original 628 icons to a total amount of ~3703. See the bottom of this document for a list of all icons.
 
 # Installation
 

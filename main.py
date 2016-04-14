@@ -110,6 +110,14 @@ cur_unicode = start_char
 
 icon_list = []
 
+# Detects if the next unicode character is a blacklisted one
+def next_unicode(cur_unicode):
+	new_unicode = cur_unicode + 1
+	while new_unicode in range(0xfe00, 0xfe10) or new_unicode == 0xfeff:
+		new_unicode = new_unicode + 1
+	return new_unicode
+
+
 if output_css:
 	css = open('./dist/css/font-awesome-appendix.css', 'w')
 
@@ -194,7 +202,7 @@ if generate_combined_icons:
 			if output_html:
 				html.write('<td><i class="fa '+css_name+' fa-2x"></i></td>\n')
 
-			cur_unicode = cur_unicode + 1
+			cur_unicode = next_unicode(cur_unicode)
 		if output_html:
 			html.write('</tr>\n')
 	if output_html:
@@ -254,7 +262,10 @@ if generate_splitted_icons:
 			font[workbench_char].transform(a2)
 			font[workbench_char].transform(b2)
 			font.copy()
-			font.selection.select(("unicode", None), cur_unicode+1)
+			first_unicode = cur_unicode
+			cur_unicode = next_unicode(cur_unicode)
+			second_unicode = cur_unicode
+			font.selection.select(("unicode", None), cur_unicode)
 			font.paste()
 			font.correctDirection()
 
@@ -263,13 +274,13 @@ if generate_splitted_icons:
 			css_name = 'fa-' + options[0] + '-' + css_operator
 
 			if output_css:
-				css.write('.' + css_name + '-alpha:before { content: "\\'+(hex(cur_unicode)[2:])+'"; }\n')
-				css.write('.' + css_name + '-beta:before { content: "\\'+(hex(cur_unicode+1)[2:])+'"; }\n')
+				css.write('.' + css_name + '-alpha:before { content: "\\'+(hex(first_unicode)[2:])+'"; }\n')
+				css.write('.' + css_name + '-beta:before { content: "\\'+(hex(second_unicode)[2:])+'"; }\n')
 
 			if output_html:
 				html.write('<td><span class="fa-stack"><i class="fa '+css_name+'-beta fa-2x fa-stack-1x" style="color: '+random.choice(colors)+';"></i><i class="fa '+css_name+'-alpha fa-2x fa-stack-1x"></i></span></td>\n')
 
-			cur_unicode = cur_unicode + 2
+			cur_unicode = next_unicode(cur_unicode)
 		if output_html:
 			html.write('</tr>\n')
 	if output_html:
@@ -345,7 +356,7 @@ if generate_slashed_icons:
 		if output_html:
 			html.write('<td><i class="fa '+css_name+' fa-2x"></i></td>\n')
 
-		cur_unicode = cur_unicode + 1
+		cur_unicode = next_unicode(cur_unicode)
 		if output_html:
 			html.write('</tr>\n')
 	if output_html:
@@ -393,7 +404,7 @@ if generate_stroked_icons:
 		if output_html:
 			html.write('<td><i class="fa '+css_name+' fa-2x"></i></td>\n')
 
-		cur_unicode = cur_unicode + 1
+		cur_unicode = next_unicode(cur_unicode)
 		if output_html:
 			html.write('</tr>\n')
 	if output_html:
@@ -460,7 +471,7 @@ if output_list:
 	orig_count = int(m.group(1))
 	readme_template = readme_template.replace('[[ORIG-COUNT]]', m.group(1))
 
-	readme_template = readme_template.replace('[[NEW-COUNT]]', str(cur_unicode - start_char + orig_count))
+	readme_template = readme_template.replace('[[NEW-COUNT]]', str(len(icon_list) + orig_count))
 
 	list.write(readme_template)
 
@@ -482,4 +493,4 @@ call("./ttf2eot < dist/fonts/fontawesome-webfont.ttf > dist/fonts/fontawesome-we
 print('[woff2_compress] generating dist/fonts/fontawesome-webfont.woff2')
 call("./woff2_compress dist/fonts/fontawesome-webfont.ttf", shell=True)
 
-print('DONE! generated ' + str(cur_unicode - start_char) + ' glyphs')
+print('DONE! generated ' + str(len(icon_list)) + ' glyphs')
