@@ -11,8 +11,8 @@ generate_combined_icons = True
 generate_splitted_icons = True
 generate_slashed_icons = True
 generate_stroked_icons = True
-workbench_char = 0xf2ff
-start_char = 0xf300
+workbench_char = 0xe000
+start_char = 0xe001
 outline_border_weight = 320
 horizontal_shifting = 0.7
 compress_css = True
@@ -55,7 +55,7 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 'heart':           ['heart', 'br', False],
 		 'heart_empty':     ['heart-o', 'br'],
 		 'group':           ['group', 'br'],
-		 'globe':			      ['globe', 'br', False],
+		 'globe':			['globe', 'br', False],
 		 '_593':            ['map-o', 'br'],
 		 '_594':            ['map', 'br', False],
 		 'cog':             ['cog', 'br'],
@@ -87,7 +87,9 @@ operators = {'plus': 'plus',
 			 'envelope_alt': 'envelope',
 			 'time': 'clock-o',
 			 'tag': 'tag',
-			 'arrow_right': 'arrow-right'}
+			 'arrow_right': 'arrow-right',
+			 'file_text': 'file-text',
+			 'music': 'music'}
 
 defined_css_rules = []
 
@@ -113,8 +115,9 @@ icon_list = []
 # Detects if the next unicode character is a blacklisted one
 def next_unicode(cur_unicode):
 	new_unicode = cur_unicode + 1
-	while new_unicode in range(0xfe00, 0xfe10) or new_unicode == 0xfeff:
+	while new_unicode in range(0xfe00, 0xfe10) or new_unicode == 0xfeff or new_unicode in range(0xf000, 0xf2ff):
 		new_unicode = new_unicode + 1
+	print(cur_unicode)
 	return new_unicode
 
 
