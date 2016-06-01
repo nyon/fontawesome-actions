@@ -1,7 +1,7 @@
 # Introduction
 
 This repository contains a superset of Dave Gandy's FontAwesome icons. It is based on FontAwesome 4.6.3 and extends
-the original 634 icons to a total amount of ~4009. See the bottom of this document for a list of all icons.
+the original 634 icons to a total amount of ~4077. See the bottom of this document for a list of all icons.
 
 # Installation
 
@@ -1161,6 +1161,28 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-text-clock-o
 * file-text-exclamation-triangle
 * file-text-minus
+* headphones-pencil
+* headphones-ban
+* headphones-tag
+* headphones-envelope
+* headphones-refresh
+* headphones-question
+* headphones-music
+* headphones-trash
+* headphones-check-circle
+* headphones-star
+* headphones-file-text
+* headphones-search
+* headphones-check
+* headphones-times-circle
+* headphones-arrow-right
+* headphones-remove
+* headphones-info
+* headphones-plus
+* headphones-cog
+* headphones-clock-o
+* headphones-exclamation-triangle
+* headphones-minus
 * filter-pencil
 * filter-ban
 * filter-tag
@@ -3295,6 +3317,50 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-text-exclamation-triangle-beta
 * file-text-minus-alpha
 * file-text-minus-beta
+* headphones-pencil-alpha
+* headphones-pencil-beta
+* headphones-ban-alpha
+* headphones-ban-beta
+* headphones-tag-alpha
+* headphones-tag-beta
+* headphones-envelope-alpha
+* headphones-envelope-beta
+* headphones-refresh-alpha
+* headphones-refresh-beta
+* headphones-question-alpha
+* headphones-question-beta
+* headphones-music-alpha
+* headphones-music-beta
+* headphones-trash-alpha
+* headphones-trash-beta
+* headphones-check-circle-alpha
+* headphones-check-circle-beta
+* headphones-star-alpha
+* headphones-star-beta
+* headphones-file-text-alpha
+* headphones-file-text-beta
+* headphones-search-alpha
+* headphones-search-beta
+* headphones-check-alpha
+* headphones-check-beta
+* headphones-times-circle-alpha
+* headphones-times-circle-beta
+* headphones-arrow-right-alpha
+* headphones-arrow-right-beta
+* headphones-remove-alpha
+* headphones-remove-beta
+* headphones-info-alpha
+* headphones-info-beta
+* headphones-plus-alpha
+* headphones-plus-beta
+* headphones-cog-alpha
+* headphones-cog-beta
+* headphones-clock-o-alpha
+* headphones-clock-o-beta
+* headphones-exclamation-triangle-alpha
+* headphones-exclamation-triangle-beta
+* headphones-minus-alpha
+* headphones-minus-beta
 * filter-pencil-alpha
 * filter-pencil-beta
 * filter-ban-alpha
@@ -3474,6 +3540,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * credit-card-slash
 * user-slash
 * file-text-slash
+* headphones-slash
 * filter-slash
 * file-audio-o-slash
 * cog-slash
@@ -3500,5 +3567,6 @@ You can clone this repository and open demo.html for a full graphical representa
 * tags-o
 * credit-card-o
 * user-o
+* headphones-o
 * filter-o
 * cog-o

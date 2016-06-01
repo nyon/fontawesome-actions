@@ -65,7 +65,8 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 '_618':            ['bluetooth', 'br'],
 		 '_619':            ['bluetooth-b', 'br'],
 		 'tasks':           ['tasks', 'br'],
-		 'credit_card':     ['credit-card', 'br']
+		 'credit_card':     ['credit-card', 'br'],
+		 'headphones':      ['headphones', 'br']
 		 }
 
 operators = {'plus': 'plus',
@@ -117,7 +118,6 @@ def next_unicode(cur_unicode):
 	new_unicode = cur_unicode + 1
 	while new_unicode in range(0xfe00, 0xfe10) or new_unicode == 0xfeff or new_unicode in range(0xf000, 0xf2ff):
 		new_unicode = new_unicode + 1
-	print(cur_unicode)
 	return new_unicode
 
 
