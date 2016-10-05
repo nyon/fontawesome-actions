@@ -1,0 +1,36 @@
+{
+  "name": "fontawesome-actions",
+  "version": "0.9.0",
+  "description": "Awesome actions and overlays for Font Awesome. Acts as a superset.",
+  "style": "dist/css/font-awesome.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nyon/fontawesome-actions.git"
+  },
+  "keywords": [
+    "fontawesome",
+    "actions",
+    "overlays",
+    "slashed",
+    "slash",
+    "plus",
+    "minus",
+    "alert",
+    "warning",
+    "success"
+  ],
+  "author": {
+    "name": "Timm Decker",
+    "email": "me@nyon.de",
+    "web": "http://nyon.io"
+  },
+
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nyon/fontawesome-actions/issues"
+  },
+  "homepage": "https://github.com/nyon/fontawesome-actions#readme"
+}

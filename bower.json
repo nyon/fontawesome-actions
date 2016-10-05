@@ -1,9 +1,9 @@
 {
   "name": "fontawesome-actions",
-  "version": "0.0.1",
+  "version": "0.9.0",
   "homepage": "https://github.com/nyon/fontawesome-actions",
   "authors": [
-    "nyon <me@nyon.de>"
+    "Timm Decker <me@nyon.de>"
   ],
   "description": "Awesome actions and overlays for Font Awesome. Acts as a superset.",
   "main": [
