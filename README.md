@@ -1,7 +1,7 @@
 # Introduction
 
-This repository contains a superset of Dave Gandy's FontAwesome icons. It is based on FontAwesome 4.6.3 and extends
-the original 634 icons to a total amount of ~4077. See the bottom of this document for a list of all icons.
+This repository contains a superset of Dave Gandy's FontAwesome icons. It is based on FontAwesome 4.7.0 and extends
+the original 675 icons to a total amount of ~4185. See the bottom of this document for a list of all icons.
 
 # Installation
 
@@ -589,6 +589,28 @@ You can clone this repository and open demo.html for a full graphical representa
 * question-circle-clock-o
 * question-circle-exclamation-triangle
 * question-circle-minus
+* phone-pencil
+* phone-ban
+* phone-tag
+* phone-envelope
+* phone-refresh
+* phone-question
+* phone-music
+* phone-trash
+* phone-check-circle
+* phone-star
+* phone-file-text
+* phone-search
+* phone-check
+* phone-times-circle
+* phone-arrow-right
+* phone-remove
+* phone-info
+* phone-plus
+* phone-cog
+* phone-clock-o
+* phone-exclamation-triangle
+* phone-minus
 * link-pencil
 * link-ban
 * link-tag
@@ -2173,6 +2195,50 @@ You can clone this repository and open demo.html for a full graphical representa
 * question-circle-exclamation-triangle-beta
 * question-circle-minus-alpha
 * question-circle-minus-beta
+* phone-pencil-alpha
+* phone-pencil-beta
+* phone-ban-alpha
+* phone-ban-beta
+* phone-tag-alpha
+* phone-tag-beta
+* phone-envelope-alpha
+* phone-envelope-beta
+* phone-refresh-alpha
+* phone-refresh-beta
+* phone-question-alpha
+* phone-question-beta
+* phone-music-alpha
+* phone-music-beta
+* phone-trash-alpha
+* phone-trash-beta
+* phone-check-circle-alpha
+* phone-check-circle-beta
+* phone-star-alpha
+* phone-star-beta
+* phone-file-text-alpha
+* phone-file-text-beta
+* phone-search-alpha
+* phone-search-beta
+* phone-check-alpha
+* phone-check-beta
+* phone-times-circle-alpha
+* phone-times-circle-beta
+* phone-arrow-right-alpha
+* phone-arrow-right-beta
+* phone-remove-alpha
+* phone-remove-beta
+* phone-info-alpha
+* phone-info-beta
+* phone-plus-alpha
+* phone-plus-beta
+* phone-cog-alpha
+* phone-cog-beta
+* phone-clock-o-alpha
+* phone-clock-o-beta
+* phone-exclamation-triangle-alpha
+* phone-exclamation-triangle-beta
+* phone-minus-alpha
+* phone-minus-beta
 * link-pencil-alpha
 * link-pencil-beta
 * link-ban-alpha
@@ -3514,6 +3580,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-pdf-o-slash
 * database-slash
 * question-circle-slash
+* phone-slash
 * link-slash
 * file-text-o-slash
 * graduation-cap-slash
@@ -3553,6 +3620,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * bookmark-o
 * camera-o
 * question-circle-o
+* phone-o
 * link-o
 * map-pin-o
 * video-camera-o
@@ -3566,7 +3634,6 @@ You can clone this repository and open demo.html for a full graphical representa
 * bluetooth-b-o
 * tags-o
 * credit-card-o
-* user-o
 * headphones-o
 * filter-o
 * cog-o

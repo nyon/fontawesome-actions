@@ -17,7 +17,7 @@ outline_border_weight = 320
 horizontal_shifting = 0.7
 compress_css = True
 icons = {'bookmark':        ['bookmark', 'tr'],
-		 'user':            ['user', 'br'],
+		 'user':            ['user', 'br', False],
 		 '_407':            ['cube', 'br'],
 		 'camera':          ['camera', 'br'],
 		 'tag':             ['tag', 'br'],
@@ -66,7 +66,8 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 '_619':            ['bluetooth-b', 'br'],
 		 'tasks':           ['tasks', 'br'],
 		 'credit_card':     ['credit-card', 'br'],
-		 'headphones':      ['headphones', 'br']
+		 'headphones':      ['headphones', 'br'],
+		 'phone':           ['phone', 'br']
 		 }
 
 operators = {'plus': 'plus',

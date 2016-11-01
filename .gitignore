@@ -1,3 +1,5 @@
 configurator
 *.pyc
 npm-debug.log
+*.sublime-project
+*.sublime-workspace
