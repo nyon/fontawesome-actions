@@ -9,29 +9,19 @@ the original 675 icons to a total amount of ~4253. See the bottom of this docume
 
 Just copy the fonts and css folder to your project and use them like the normal Font Awesome.
 
+## With yarn
+
+    yarn add fontawesome-actions
+
+## With npm
+
+    npm install fontawesome-actions --save
+
 ## With bower
 
     bower install fontawesome-actions
 
-## With bundler < 1.8.4
-
-Edit your Gemfile:
-
-    # At the top
-    source 'https://rails-assets.org'
-
-    # somewhere in your Gemfile
-    gem 'rails-assets-fontawesome-actions'
-
-Then run
-
-    bundle
-
-And include the following in application.css
-
-    *= require fontawesome-actions
-
-## With bundler >= 1.8.4
+## With bundler
 
 Edit your Gemfile:
 
