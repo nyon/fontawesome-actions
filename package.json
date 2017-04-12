@@ -1,6 +1,6 @@
 {
   "name": "fontawesome-actions",
-  "version": "0.9.0",
+  "version": "0.14.0",
   "description": "Awesome actions and overlays for Font Awesome. Acts as a superset.",
   "style": "dist/css/font-awesome.css",
   "scripts": {
