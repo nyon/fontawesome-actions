@@ -1,7 +1,7 @@
 # Introduction
 
 This repository contains a superset of Dave Gandy's FontAwesome icons. It is based on FontAwesome 4.7.0 and extends
-the original 675 icons to a total amount of ~4185. See the bottom of this document for a list of all icons.
+the original 675 icons to a total amount of ~4253. See the bottom of this document for a list of all icons.
 
 # Installation
 
@@ -941,6 +941,28 @@ You can clone this repository and open demo.html for a full graphical representa
 * shopping-cart-clock-o
 * shopping-cart-exclamation-triangle
 * shopping-cart-minus
+* archive-pencil
+* archive-ban
+* archive-tag
+* archive-envelope
+* archive-refresh
+* archive-question
+* archive-music
+* archive-trash
+* archive-check-circle
+* archive-star
+* archive-file-text
+* archive-search
+* archive-check
+* archive-times-circle
+* archive-arrow-right
+* archive-remove
+* archive-info
+* archive-plus
+* archive-cog
+* archive-clock-o
+* archive-exclamation-triangle
+* archive-minus
 * folder-open-o-pencil
 * folder-open-o-ban
 * folder-open-o-tag
@@ -2899,6 +2921,50 @@ You can clone this repository and open demo.html for a full graphical representa
 * shopping-cart-exclamation-triangle-beta
 * shopping-cart-minus-alpha
 * shopping-cart-minus-beta
+* archive-pencil-alpha
+* archive-pencil-beta
+* archive-ban-alpha
+* archive-ban-beta
+* archive-tag-alpha
+* archive-tag-beta
+* archive-envelope-alpha
+* archive-envelope-beta
+* archive-refresh-alpha
+* archive-refresh-beta
+* archive-question-alpha
+* archive-question-beta
+* archive-music-alpha
+* archive-music-beta
+* archive-trash-alpha
+* archive-trash-beta
+* archive-check-circle-alpha
+* archive-check-circle-beta
+* archive-star-alpha
+* archive-star-beta
+* archive-file-text-alpha
+* archive-file-text-beta
+* archive-search-alpha
+* archive-search-beta
+* archive-check-alpha
+* archive-check-beta
+* archive-times-circle-alpha
+* archive-times-circle-beta
+* archive-arrow-right-alpha
+* archive-arrow-right-beta
+* archive-remove-alpha
+* archive-remove-beta
+* archive-info-alpha
+* archive-info-beta
+* archive-plus-alpha
+* archive-plus-beta
+* archive-cog-alpha
+* archive-cog-beta
+* archive-clock-o-alpha
+* archive-clock-o-beta
+* archive-exclamation-triangle-alpha
+* archive-exclamation-triangle-beta
+* archive-minus-alpha
+* archive-minus-beta
 * folder-open-o-pencil-alpha
 * folder-open-o-pencil-beta
 * folder-open-o-ban-alpha
@@ -3596,6 +3662,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-slash
 * calendar-slash
 * shopping-cart-slash
+* archive-slash
 * folder-open-o-slash
 * shopping-bag-slash
 * shopping-basket-slash
@@ -3628,6 +3695,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * cube-o
 * tag-o
 * file-o
+* archive-o
 * shopping-bag-o
 * shopping-basket-o
 * bluetooth-o
