@@ -92,7 +92,10 @@ operators = {'plus': 'plus',
 			 'tag': 'tag',
 			 'arrow_right': 'arrow-right',
 			 'file_text': 'file-text',
-			 'music': 'music'}
+			 'music': 'music',
+			 'arrow_down': 'arrow-down',
+			 'arrow_up': 'arrow-up',
+			 }
 
 defined_css_rules = []
 
