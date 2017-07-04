@@ -1,7 +1,7 @@
 # Introduction
 
 This repository contains a superset of Dave Gandy's FontAwesome icons. It is based on FontAwesome 4.7.0 and extends
-the original 675 icons to a total amount of ~4645. See the bottom of this document for a list of all icons.
+the original 675 icons to a total amount of ~4807. See the bottom of this document for a list of all icons.
 
 # Installation
 
@@ -122,6 +122,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * comment-tag
 * comment-envelope
 * comment-refresh
+* comment-minus-circle
 * comment-question
 * comment-music
 * comment-trash
@@ -146,6 +147,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * tasks-tag
 * tasks-envelope
 * tasks-refresh
+* tasks-minus-circle
 * tasks-question
 * tasks-music
 * tasks-trash
@@ -170,6 +172,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * envelope-tag
 * envelope-envelope
 * envelope-refresh
+* envelope-minus-circle
 * envelope-question
 * envelope-music
 * envelope-trash
@@ -194,6 +197,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * inbox-tag
 * inbox-envelope
 * inbox-refresh
+* inbox-minus-circle
 * inbox-question
 * inbox-music
 * inbox-trash
@@ -218,6 +222,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * cloud-tag
 * cloud-envelope
 * cloud-refresh
+* cloud-minus-circle
 * cloud-question
 * cloud-music
 * cloud-trash
@@ -242,6 +247,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * group-tag
 * group-envelope
 * group-refresh
+* group-minus-circle
 * group-question
 * group-music
 * group-trash
@@ -266,6 +272,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-code-o-tag
 * file-code-o-envelope
 * file-code-o-refresh
+* file-code-o-minus-circle
 * file-code-o-question
 * file-code-o-music
 * file-code-o-trash
@@ -290,6 +297,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-video-o-tag
 * file-video-o-envelope
 * file-video-o-refresh
+* file-video-o-minus-circle
 * file-video-o-question
 * file-video-o-music
 * file-video-o-trash
@@ -314,6 +322,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * bookmark-tag
 * bookmark-envelope
 * bookmark-refresh
+* bookmark-minus-circle
 * bookmark-question
 * bookmark-music
 * bookmark-trash
@@ -338,6 +347,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-zip-o-tag
 * file-zip-o-envelope
 * file-zip-o-refresh
+* file-zip-o-minus-circle
 * file-zip-o-question
 * file-zip-o-music
 * file-zip-o-trash
@@ -362,6 +372,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-image-o-tag
 * file-image-o-envelope
 * file-image-o-refresh
+* file-image-o-minus-circle
 * file-image-o-question
 * file-image-o-music
 * file-image-o-trash
@@ -386,6 +397,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-powerpoint-o-tag
 * file-powerpoint-o-envelope
 * file-powerpoint-o-refresh
+* file-powerpoint-o-minus-circle
 * file-powerpoint-o-question
 * file-powerpoint-o-music
 * file-powerpoint-o-trash
@@ -410,6 +422,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-excel-o-tag
 * file-excel-o-envelope
 * file-excel-o-refresh
+* file-excel-o-minus-circle
 * file-excel-o-question
 * file-excel-o-music
 * file-excel-o-trash
@@ -434,6 +447,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-word-o-tag
 * file-word-o-envelope
 * file-word-o-refresh
+* file-word-o-minus-circle
 * file-word-o-question
 * file-word-o-music
 * file-word-o-trash
@@ -458,6 +472,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * heart-o-tag
 * heart-o-envelope
 * heart-o-refresh
+* heart-o-minus-circle
 * heart-o-question
 * heart-o-music
 * heart-o-trash
@@ -482,6 +497,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * camera-tag
 * camera-envelope
 * camera-refresh
+* camera-minus-circle
 * camera-question
 * camera-music
 * camera-trash
@@ -506,6 +522,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * lock-tag
 * lock-envelope
 * lock-refresh
+* lock-minus-circle
 * lock-question
 * lock-music
 * lock-trash
@@ -530,6 +547,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * folder-o-tag
 * folder-o-envelope
 * folder-o-refresh
+* folder-o-minus-circle
 * folder-o-question
 * folder-o-music
 * folder-o-trash
@@ -554,6 +572,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * floppy-o-tag
 * floppy-o-envelope
 * floppy-o-refresh
+* floppy-o-minus-circle
 * floppy-o-question
 * floppy-o-music
 * floppy-o-trash
@@ -578,6 +597,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-pdf-o-tag
 * file-pdf-o-envelope
 * file-pdf-o-refresh
+* file-pdf-o-minus-circle
 * file-pdf-o-question
 * file-pdf-o-music
 * file-pdf-o-trash
@@ -602,6 +622,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * database-tag
 * database-envelope
 * database-refresh
+* database-minus-circle
 * database-question
 * database-music
 * database-trash
@@ -626,6 +647,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * question-circle-tag
 * question-circle-envelope
 * question-circle-refresh
+* question-circle-minus-circle
 * question-circle-question
 * question-circle-music
 * question-circle-trash
@@ -650,6 +672,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * phone-tag
 * phone-envelope
 * phone-refresh
+* phone-minus-circle
 * phone-question
 * phone-music
 * phone-trash
@@ -674,6 +697,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * link-tag
 * link-envelope
 * link-refresh
+* link-minus-circle
 * link-question
 * link-music
 * link-trash
@@ -698,6 +722,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-text-o-tag
 * file-text-o-envelope
 * file-text-o-refresh
+* file-text-o-minus-circle
 * file-text-o-question
 * file-text-o-music
 * file-text-o-trash
@@ -722,6 +747,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * graduation-cap-tag
 * graduation-cap-envelope
 * graduation-cap-refresh
+* graduation-cap-minus-circle
 * graduation-cap-question
 * graduation-cap-music
 * graduation-cap-trash
@@ -746,6 +772,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * map-tag
 * map-envelope
 * map-refresh
+* map-minus-circle
 * map-question
 * map-music
 * map-trash
@@ -770,6 +797,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * map-o-tag
 * map-o-envelope
 * map-o-refresh
+* map-o-minus-circle
 * map-o-question
 * map-o-music
 * map-o-trash
@@ -794,6 +822,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * map-pin-tag
 * map-pin-envelope
 * map-pin-refresh
+* map-pin-minus-circle
 * map-pin-question
 * map-pin-music
 * map-pin-trash
@@ -818,6 +847,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * video-camera-tag
 * video-camera-envelope
 * video-camera-refresh
+* video-camera-minus-circle
 * video-camera-question
 * video-camera-music
 * video-camera-trash
@@ -842,6 +872,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * heart-tag
 * heart-envelope
 * heart-refresh
+* heart-minus-circle
 * heart-question
 * heart-music
 * heart-trash
@@ -866,6 +897,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * folder-tag
 * folder-envelope
 * folder-refresh
+* folder-minus-circle
 * folder-question
 * folder-music
 * folder-trash
@@ -890,6 +922,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * globe-tag
 * globe-envelope
 * globe-refresh
+* globe-minus-circle
 * globe-question
 * globe-music
 * globe-trash
@@ -914,6 +947,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * cube-tag
 * cube-envelope
 * cube-refresh
+* cube-minus-circle
 * cube-question
 * cube-music
 * cube-trash
@@ -938,6 +972,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * tag-tag
 * tag-envelope
 * tag-refresh
+* tag-minus-circle
 * tag-question
 * tag-music
 * tag-trash
@@ -962,6 +997,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-tag
 * file-envelope
 * file-refresh
+* file-minus-circle
 * file-question
 * file-music
 * file-trash
@@ -986,6 +1022,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * calendar-tag
 * calendar-envelope
 * calendar-refresh
+* calendar-minus-circle
 * calendar-question
 * calendar-music
 * calendar-trash
@@ -1010,6 +1047,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * shopping-cart-tag
 * shopping-cart-envelope
 * shopping-cart-refresh
+* shopping-cart-minus-circle
 * shopping-cart-question
 * shopping-cart-music
 * shopping-cart-trash
@@ -1034,6 +1072,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * archive-tag
 * archive-envelope
 * archive-refresh
+* archive-minus-circle
 * archive-question
 * archive-music
 * archive-trash
@@ -1058,6 +1097,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * folder-open-o-tag
 * folder-open-o-envelope
 * folder-open-o-refresh
+* folder-open-o-minus-circle
 * folder-open-o-question
 * folder-open-o-music
 * folder-open-o-trash
@@ -1082,6 +1122,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * shopping-bag-tag
 * shopping-bag-envelope
 * shopping-bag-refresh
+* shopping-bag-minus-circle
 * shopping-bag-question
 * shopping-bag-music
 * shopping-bag-trash
@@ -1106,6 +1147,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * shopping-basket-tag
 * shopping-basket-envelope
 * shopping-basket-refresh
+* shopping-basket-minus-circle
 * shopping-basket-question
 * shopping-basket-music
 * shopping-basket-trash
@@ -1130,6 +1172,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * bluetooth-tag
 * bluetooth-envelope
 * bluetooth-refresh
+* bluetooth-minus-circle
 * bluetooth-question
 * bluetooth-music
 * bluetooth-trash
@@ -1154,6 +1197,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * bluetooth-b-tag
 * bluetooth-b-envelope
 * bluetooth-b-refresh
+* bluetooth-b-minus-circle
 * bluetooth-b-question
 * bluetooth-b-music
 * bluetooth-b-trash
@@ -1178,6 +1222,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * picture-o-tag
 * picture-o-envelope
 * picture-o-refresh
+* picture-o-minus-circle
 * picture-o-question
 * picture-o-music
 * picture-o-trash
@@ -1202,6 +1247,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * folder-open-tag
 * folder-open-envelope
 * folder-open-refresh
+* folder-open-minus-circle
 * folder-open-question
 * folder-open-music
 * folder-open-trash
@@ -1226,6 +1272,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * tags-tag
 * tags-envelope
 * tags-refresh
+* tags-minus-circle
 * tags-question
 * tags-music
 * tags-trash
@@ -1250,6 +1297,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * credit-card-tag
 * credit-card-envelope
 * credit-card-refresh
+* credit-card-minus-circle
 * credit-card-question
 * credit-card-music
 * credit-card-trash
@@ -1274,6 +1322,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * user-tag
 * user-envelope
 * user-refresh
+* user-minus-circle
 * user-question
 * user-music
 * user-trash
@@ -1298,6 +1347,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-text-tag
 * file-text-envelope
 * file-text-refresh
+* file-text-minus-circle
 * file-text-question
 * file-text-music
 * file-text-trash
@@ -1322,6 +1372,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * headphones-tag
 * headphones-envelope
 * headphones-refresh
+* headphones-minus-circle
 * headphones-question
 * headphones-music
 * headphones-trash
@@ -1346,6 +1397,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * filter-tag
 * filter-envelope
 * filter-refresh
+* filter-minus-circle
 * filter-question
 * filter-music
 * filter-trash
@@ -1370,6 +1422,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-audio-o-tag
 * file-audio-o-envelope
 * file-audio-o-refresh
+* file-audio-o-minus-circle
 * file-audio-o-question
 * file-audio-o-music
 * file-audio-o-trash
@@ -1394,6 +1447,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * cog-tag
 * cog-envelope
 * cog-refresh
+* cog-minus-circle
 * cog-question
 * cog-music
 * cog-trash
@@ -1423,6 +1477,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * comment-envelope-beta
 * comment-refresh-alpha
 * comment-refresh-beta
+* comment-minus-circle-alpha
+* comment-minus-circle-beta
 * comment-question-alpha
 * comment-question-beta
 * comment-music-alpha
@@ -1471,6 +1527,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * tasks-envelope-beta
 * tasks-refresh-alpha
 * tasks-refresh-beta
+* tasks-minus-circle-alpha
+* tasks-minus-circle-beta
 * tasks-question-alpha
 * tasks-question-beta
 * tasks-music-alpha
@@ -1519,6 +1577,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * envelope-envelope-beta
 * envelope-refresh-alpha
 * envelope-refresh-beta
+* envelope-minus-circle-alpha
+* envelope-minus-circle-beta
 * envelope-question-alpha
 * envelope-question-beta
 * envelope-music-alpha
@@ -1567,6 +1627,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * inbox-envelope-beta
 * inbox-refresh-alpha
 * inbox-refresh-beta
+* inbox-minus-circle-alpha
+* inbox-minus-circle-beta
 * inbox-question-alpha
 * inbox-question-beta
 * inbox-music-alpha
@@ -1615,6 +1677,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * cloud-envelope-beta
 * cloud-refresh-alpha
 * cloud-refresh-beta
+* cloud-minus-circle-alpha
+* cloud-minus-circle-beta
 * cloud-question-alpha
 * cloud-question-beta
 * cloud-music-alpha
@@ -1663,6 +1727,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * group-envelope-beta
 * group-refresh-alpha
 * group-refresh-beta
+* group-minus-circle-alpha
+* group-minus-circle-beta
 * group-question-alpha
 * group-question-beta
 * group-music-alpha
@@ -1711,6 +1777,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-code-o-envelope-beta
 * file-code-o-refresh-alpha
 * file-code-o-refresh-beta
+* file-code-o-minus-circle-alpha
+* file-code-o-minus-circle-beta
 * file-code-o-question-alpha
 * file-code-o-question-beta
 * file-code-o-music-alpha
@@ -1759,6 +1827,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-video-o-envelope-beta
 * file-video-o-refresh-alpha
 * file-video-o-refresh-beta
+* file-video-o-minus-circle-alpha
+* file-video-o-minus-circle-beta
 * file-video-o-question-alpha
 * file-video-o-question-beta
 * file-video-o-music-alpha
@@ -1807,6 +1877,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * bookmark-envelope-beta
 * bookmark-refresh-alpha
 * bookmark-refresh-beta
+* bookmark-minus-circle-alpha
+* bookmark-minus-circle-beta
 * bookmark-question-alpha
 * bookmark-question-beta
 * bookmark-music-alpha
@@ -1855,6 +1927,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-zip-o-envelope-beta
 * file-zip-o-refresh-alpha
 * file-zip-o-refresh-beta
+* file-zip-o-minus-circle-alpha
+* file-zip-o-minus-circle-beta
 * file-zip-o-question-alpha
 * file-zip-o-question-beta
 * file-zip-o-music-alpha
@@ -1903,6 +1977,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-image-o-envelope-beta
 * file-image-o-refresh-alpha
 * file-image-o-refresh-beta
+* file-image-o-minus-circle-alpha
+* file-image-o-minus-circle-beta
 * file-image-o-question-alpha
 * file-image-o-question-beta
 * file-image-o-music-alpha
@@ -1951,6 +2027,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-powerpoint-o-envelope-beta
 * file-powerpoint-o-refresh-alpha
 * file-powerpoint-o-refresh-beta
+* file-powerpoint-o-minus-circle-alpha
+* file-powerpoint-o-minus-circle-beta
 * file-powerpoint-o-question-alpha
 * file-powerpoint-o-question-beta
 * file-powerpoint-o-music-alpha
@@ -1999,6 +2077,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-excel-o-envelope-beta
 * file-excel-o-refresh-alpha
 * file-excel-o-refresh-beta
+* file-excel-o-minus-circle-alpha
+* file-excel-o-minus-circle-beta
 * file-excel-o-question-alpha
 * file-excel-o-question-beta
 * file-excel-o-music-alpha
@@ -2047,6 +2127,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-word-o-envelope-beta
 * file-word-o-refresh-alpha
 * file-word-o-refresh-beta
+* file-word-o-minus-circle-alpha
+* file-word-o-minus-circle-beta
 * file-word-o-question-alpha
 * file-word-o-question-beta
 * file-word-o-music-alpha
@@ -2095,6 +2177,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * heart-o-envelope-beta
 * heart-o-refresh-alpha
 * heart-o-refresh-beta
+* heart-o-minus-circle-alpha
+* heart-o-minus-circle-beta
 * heart-o-question-alpha
 * heart-o-question-beta
 * heart-o-music-alpha
@@ -2143,6 +2227,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * camera-envelope-beta
 * camera-refresh-alpha
 * camera-refresh-beta
+* camera-minus-circle-alpha
+* camera-minus-circle-beta
 * camera-question-alpha
 * camera-question-beta
 * camera-music-alpha
@@ -2191,6 +2277,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * lock-envelope-beta
 * lock-refresh-alpha
 * lock-refresh-beta
+* lock-minus-circle-alpha
+* lock-minus-circle-beta
 * lock-question-alpha
 * lock-question-beta
 * lock-music-alpha
@@ -2239,6 +2327,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * folder-o-envelope-beta
 * folder-o-refresh-alpha
 * folder-o-refresh-beta
+* folder-o-minus-circle-alpha
+* folder-o-minus-circle-beta
 * folder-o-question-alpha
 * folder-o-question-beta
 * folder-o-music-alpha
@@ -2287,6 +2377,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * floppy-o-envelope-beta
 * floppy-o-refresh-alpha
 * floppy-o-refresh-beta
+* floppy-o-minus-circle-alpha
+* floppy-o-minus-circle-beta
 * floppy-o-question-alpha
 * floppy-o-question-beta
 * floppy-o-music-alpha
@@ -2335,6 +2427,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-pdf-o-envelope-beta
 * file-pdf-o-refresh-alpha
 * file-pdf-o-refresh-beta
+* file-pdf-o-minus-circle-alpha
+* file-pdf-o-minus-circle-beta
 * file-pdf-o-question-alpha
 * file-pdf-o-question-beta
 * file-pdf-o-music-alpha
@@ -2383,6 +2477,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * database-envelope-beta
 * database-refresh-alpha
 * database-refresh-beta
+* database-minus-circle-alpha
+* database-minus-circle-beta
 * database-question-alpha
 * database-question-beta
 * database-music-alpha
@@ -2431,6 +2527,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * question-circle-envelope-beta
 * question-circle-refresh-alpha
 * question-circle-refresh-beta
+* question-circle-minus-circle-alpha
+* question-circle-minus-circle-beta
 * question-circle-question-alpha
 * question-circle-question-beta
 * question-circle-music-alpha
@@ -2479,6 +2577,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * phone-envelope-beta
 * phone-refresh-alpha
 * phone-refresh-beta
+* phone-minus-circle-alpha
+* phone-minus-circle-beta
 * phone-question-alpha
 * phone-question-beta
 * phone-music-alpha
@@ -2527,6 +2627,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * link-envelope-beta
 * link-refresh-alpha
 * link-refresh-beta
+* link-minus-circle-alpha
+* link-minus-circle-beta
 * link-question-alpha
 * link-question-beta
 * link-music-alpha
@@ -2575,6 +2677,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-text-o-envelope-beta
 * file-text-o-refresh-alpha
 * file-text-o-refresh-beta
+* file-text-o-minus-circle-alpha
+* file-text-o-minus-circle-beta
 * file-text-o-question-alpha
 * file-text-o-question-beta
 * file-text-o-music-alpha
@@ -2623,6 +2727,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * graduation-cap-envelope-beta
 * graduation-cap-refresh-alpha
 * graduation-cap-refresh-beta
+* graduation-cap-minus-circle-alpha
+* graduation-cap-minus-circle-beta
 * graduation-cap-question-alpha
 * graduation-cap-question-beta
 * graduation-cap-music-alpha
@@ -2671,6 +2777,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * map-envelope-beta
 * map-refresh-alpha
 * map-refresh-beta
+* map-minus-circle-alpha
+* map-minus-circle-beta
 * map-question-alpha
 * map-question-beta
 * map-music-alpha
@@ -2719,6 +2827,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * map-o-envelope-beta
 * map-o-refresh-alpha
 * map-o-refresh-beta
+* map-o-minus-circle-alpha
+* map-o-minus-circle-beta
 * map-o-question-alpha
 * map-o-question-beta
 * map-o-music-alpha
@@ -2767,6 +2877,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * map-pin-envelope-beta
 * map-pin-refresh-alpha
 * map-pin-refresh-beta
+* map-pin-minus-circle-alpha
+* map-pin-minus-circle-beta
 * map-pin-question-alpha
 * map-pin-question-beta
 * map-pin-music-alpha
@@ -2815,6 +2927,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * video-camera-envelope-beta
 * video-camera-refresh-alpha
 * video-camera-refresh-beta
+* video-camera-minus-circle-alpha
+* video-camera-minus-circle-beta
 * video-camera-question-alpha
 * video-camera-question-beta
 * video-camera-music-alpha
@@ -2863,6 +2977,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * heart-envelope-beta
 * heart-refresh-alpha
 * heart-refresh-beta
+* heart-minus-circle-alpha
+* heart-minus-circle-beta
 * heart-question-alpha
 * heart-question-beta
 * heart-music-alpha
@@ -2911,6 +3027,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * folder-envelope-beta
 * folder-refresh-alpha
 * folder-refresh-beta
+* folder-minus-circle-alpha
+* folder-minus-circle-beta
 * folder-question-alpha
 * folder-question-beta
 * folder-music-alpha
@@ -2959,6 +3077,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * globe-envelope-beta
 * globe-refresh-alpha
 * globe-refresh-beta
+* globe-minus-circle-alpha
+* globe-minus-circle-beta
 * globe-question-alpha
 * globe-question-beta
 * globe-music-alpha
@@ -3007,6 +3127,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * cube-envelope-beta
 * cube-refresh-alpha
 * cube-refresh-beta
+* cube-minus-circle-alpha
+* cube-minus-circle-beta
 * cube-question-alpha
 * cube-question-beta
 * cube-music-alpha
@@ -3055,6 +3177,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * tag-envelope-beta
 * tag-refresh-alpha
 * tag-refresh-beta
+* tag-minus-circle-alpha
+* tag-minus-circle-beta
 * tag-question-alpha
 * tag-question-beta
 * tag-music-alpha
@@ -3103,6 +3227,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-envelope-beta
 * file-refresh-alpha
 * file-refresh-beta
+* file-minus-circle-alpha
+* file-minus-circle-beta
 * file-question-alpha
 * file-question-beta
 * file-music-alpha
@@ -3151,6 +3277,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * calendar-envelope-beta
 * calendar-refresh-alpha
 * calendar-refresh-beta
+* calendar-minus-circle-alpha
+* calendar-minus-circle-beta
 * calendar-question-alpha
 * calendar-question-beta
 * calendar-music-alpha
@@ -3199,6 +3327,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * shopping-cart-envelope-beta
 * shopping-cart-refresh-alpha
 * shopping-cart-refresh-beta
+* shopping-cart-minus-circle-alpha
+* shopping-cart-minus-circle-beta
 * shopping-cart-question-alpha
 * shopping-cart-question-beta
 * shopping-cart-music-alpha
@@ -3247,6 +3377,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * archive-envelope-beta
 * archive-refresh-alpha
 * archive-refresh-beta
+* archive-minus-circle-alpha
+* archive-minus-circle-beta
 * archive-question-alpha
 * archive-question-beta
 * archive-music-alpha
@@ -3295,6 +3427,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * folder-open-o-envelope-beta
 * folder-open-o-refresh-alpha
 * folder-open-o-refresh-beta
+* folder-open-o-minus-circle-alpha
+* folder-open-o-minus-circle-beta
 * folder-open-o-question-alpha
 * folder-open-o-question-beta
 * folder-open-o-music-alpha
@@ -3343,6 +3477,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * shopping-bag-envelope-beta
 * shopping-bag-refresh-alpha
 * shopping-bag-refresh-beta
+* shopping-bag-minus-circle-alpha
+* shopping-bag-minus-circle-beta
 * shopping-bag-question-alpha
 * shopping-bag-question-beta
 * shopping-bag-music-alpha
@@ -3391,6 +3527,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * shopping-basket-envelope-beta
 * shopping-basket-refresh-alpha
 * shopping-basket-refresh-beta
+* shopping-basket-minus-circle-alpha
+* shopping-basket-minus-circle-beta
 * shopping-basket-question-alpha
 * shopping-basket-question-beta
 * shopping-basket-music-alpha
@@ -3439,6 +3577,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * bluetooth-envelope-beta
 * bluetooth-refresh-alpha
 * bluetooth-refresh-beta
+* bluetooth-minus-circle-alpha
+* bluetooth-minus-circle-beta
 * bluetooth-question-alpha
 * bluetooth-question-beta
 * bluetooth-music-alpha
@@ -3487,6 +3627,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * bluetooth-b-envelope-beta
 * bluetooth-b-refresh-alpha
 * bluetooth-b-refresh-beta
+* bluetooth-b-minus-circle-alpha
+* bluetooth-b-minus-circle-beta
 * bluetooth-b-question-alpha
 * bluetooth-b-question-beta
 * bluetooth-b-music-alpha
@@ -3535,6 +3677,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * picture-o-envelope-beta
 * picture-o-refresh-alpha
 * picture-o-refresh-beta
+* picture-o-minus-circle-alpha
+* picture-o-minus-circle-beta
 * picture-o-question-alpha
 * picture-o-question-beta
 * picture-o-music-alpha
@@ -3583,6 +3727,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * folder-open-envelope-beta
 * folder-open-refresh-alpha
 * folder-open-refresh-beta
+* folder-open-minus-circle-alpha
+* folder-open-minus-circle-beta
 * folder-open-question-alpha
 * folder-open-question-beta
 * folder-open-music-alpha
@@ -3631,6 +3777,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * tags-envelope-beta
 * tags-refresh-alpha
 * tags-refresh-beta
+* tags-minus-circle-alpha
+* tags-minus-circle-beta
 * tags-question-alpha
 * tags-question-beta
 * tags-music-alpha
@@ -3679,6 +3827,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * credit-card-envelope-beta
 * credit-card-refresh-alpha
 * credit-card-refresh-beta
+* credit-card-minus-circle-alpha
+* credit-card-minus-circle-beta
 * credit-card-question-alpha
 * credit-card-question-beta
 * credit-card-music-alpha
@@ -3727,6 +3877,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * user-envelope-beta
 * user-refresh-alpha
 * user-refresh-beta
+* user-minus-circle-alpha
+* user-minus-circle-beta
 * user-question-alpha
 * user-question-beta
 * user-music-alpha
@@ -3775,6 +3927,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-text-envelope-beta
 * file-text-refresh-alpha
 * file-text-refresh-beta
+* file-text-minus-circle-alpha
+* file-text-minus-circle-beta
 * file-text-question-alpha
 * file-text-question-beta
 * file-text-music-alpha
@@ -3823,6 +3977,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * headphones-envelope-beta
 * headphones-refresh-alpha
 * headphones-refresh-beta
+* headphones-minus-circle-alpha
+* headphones-minus-circle-beta
 * headphones-question-alpha
 * headphones-question-beta
 * headphones-music-alpha
@@ -3871,6 +4027,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * filter-envelope-beta
 * filter-refresh-alpha
 * filter-refresh-beta
+* filter-minus-circle-alpha
+* filter-minus-circle-beta
 * filter-question-alpha
 * filter-question-beta
 * filter-music-alpha
@@ -3919,6 +4077,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-audio-o-envelope-beta
 * file-audio-o-refresh-alpha
 * file-audio-o-refresh-beta
+* file-audio-o-minus-circle-alpha
+* file-audio-o-minus-circle-beta
 * file-audio-o-question-alpha
 * file-audio-o-question-beta
 * file-audio-o-music-alpha
@@ -3967,6 +4127,8 @@ You can clone this repository and open demo.html for a full graphical representa
 * cog-envelope-beta
 * cog-refresh-alpha
 * cog-refresh-beta
+* cog-minus-circle-alpha
+* cog-minus-circle-beta
 * cog-question-alpha
 * cog-question-beta
 * cog-music-alpha

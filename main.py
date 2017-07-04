@@ -96,6 +96,7 @@ operators = {'plus': 'plus',
 			 'music': 'music',
 			 'arrow_down': 'arrow-down',
 			 'arrow_up': 'arrow-up',
+			 'minus_sign': 'minus-circle',
 			 }
 
 defined_css_rules = []
