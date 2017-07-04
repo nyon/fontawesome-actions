@@ -1,7 +1,7 @@
 # Introduction
 
 This repository contains a superset of Dave Gandy's FontAwesome icons. It is based on FontAwesome 4.7.0 and extends
-the original 675 icons to a total amount of ~4571. See the bottom of this document for a list of all icons.
+the original 675 icons to a total amount of ~4645. See the bottom of this document for a list of all icons.
 
 # Installation
 
@@ -501,6 +501,30 @@ You can clone this repository and open demo.html for a full graphical representa
 * camera-clock-o
 * camera-exclamation-triangle
 * camera-minus
+* lock-pencil
+* lock-ban
+* lock-tag
+* lock-envelope
+* lock-refresh
+* lock-question
+* lock-music
+* lock-trash
+* lock-check-circle
+* lock-arrow-down
+* lock-star
+* lock-arrow-up
+* lock-file-text
+* lock-search
+* lock-check
+* lock-times-circle
+* lock-arrow-right
+* lock-remove
+* lock-info
+* lock-plus
+* lock-cog
+* lock-clock-o
+* lock-exclamation-triangle
+* lock-minus
 * folder-o-pencil
 * folder-o-ban
 * folder-o-tag
@@ -2157,6 +2181,54 @@ You can clone this repository and open demo.html for a full graphical representa
 * camera-exclamation-triangle-beta
 * camera-minus-alpha
 * camera-minus-beta
+* lock-pencil-alpha
+* lock-pencil-beta
+* lock-ban-alpha
+* lock-ban-beta
+* lock-tag-alpha
+* lock-tag-beta
+* lock-envelope-alpha
+* lock-envelope-beta
+* lock-refresh-alpha
+* lock-refresh-beta
+* lock-question-alpha
+* lock-question-beta
+* lock-music-alpha
+* lock-music-beta
+* lock-trash-alpha
+* lock-trash-beta
+* lock-check-circle-alpha
+* lock-check-circle-beta
+* lock-arrow-down-alpha
+* lock-arrow-down-beta
+* lock-star-alpha
+* lock-star-beta
+* lock-arrow-up-alpha
+* lock-arrow-up-beta
+* lock-file-text-alpha
+* lock-file-text-beta
+* lock-search-alpha
+* lock-search-beta
+* lock-check-alpha
+* lock-check-beta
+* lock-times-circle-alpha
+* lock-times-circle-beta
+* lock-arrow-right-alpha
+* lock-arrow-right-beta
+* lock-remove-alpha
+* lock-remove-beta
+* lock-info-alpha
+* lock-info-beta
+* lock-plus-alpha
+* lock-plus-beta
+* lock-cog-alpha
+* lock-cog-beta
+* lock-clock-o-alpha
+* lock-clock-o-beta
+* lock-exclamation-triangle-alpha
+* lock-exclamation-triangle-beta
+* lock-minus-alpha
+* lock-minus-beta
 * folder-o-pencil-alpha
 * folder-o-pencil-beta
 * folder-o-ban-alpha
@@ -3949,6 +4021,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * file-word-o-slash
 * heart-o-slash
 * camera-slash
+* lock-slash
 * folder-o-slash
 * floppy-o-slash
 * file-pdf-o-slash
@@ -3994,6 +4067,7 @@ You can clone this repository and open demo.html for a full graphical representa
 * group-o
 * bookmark-o
 * camera-o
+* lock-o
 * question-circle-o
 * phone-o
 * link-o

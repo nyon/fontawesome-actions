@@ -68,7 +68,8 @@ icons = {'bookmark':        ['bookmark', 'tr'],
 		 'credit_card':     ['credit-card', 'br'],
 		 'headphones':      ['headphones', 'br'],
 		 'phone':           ['phone', 'br'],
-		 'archive':         ['archive', 'br']
+		 'archive':         ['archive', 'br'],
+		 'lock':            ['lock', 'br']
 		 }
 
 operators = {'plus': 'plus',
