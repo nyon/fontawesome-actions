@@ -427,13 +427,13 @@ if output_css:
 	css.close()
 
 	# cleanup pre existant css rules that are conflicting with newly generated ones
-	print 'cleanup ...'
+	print ('cleanup ...')
 	css = open('./dist/css/font-awesome.css', 'r')
 	text = css.read()
 	css.close()
 
 	for rule in defined_css_rules:
-		print rule
+		print (rule)
 		text = re.sub(r'\.'+rule+':before {\n(.*)\n}', '', text)
 
 
@@ -448,7 +448,7 @@ if output_css:
 
 	call(['rm', './dist/css/font-awesome-appendix.css'])
 
-	print 'done'
+	print ('done')
 
 	if compress_css:
 		css = open('./dist/css/font-awesome.css', 'r')
